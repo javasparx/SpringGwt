@@ -1,12 +1,11 @@
 package uz.javlon.webapp.client.proxies;
 
-import java.util.Set;
-
+import com.google.web.bindery.requestfactory.shared.EntityProxy;
+import com.google.web.bindery.requestfactory.shared.ProxyFor;
 import uz.javlon.model.User;
 import uz.javlon.webapp.server.locators.UserLocator;
 
-import com.google.web.bindery.requestfactory.shared.EntityProxy;
-import com.google.web.bindery.requestfactory.shared.ProxyFor;
+import java.util.Set;
 
 
 @ProxyFor(value=User.class, locator=UserLocator.class)

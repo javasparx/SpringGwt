@@ -2,14 +2,14 @@ package uz.javlon.dao.hibernate;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import uz.javlon.dao.LookupDao;
-import uz.javlon.model.Role;
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import uz.javlon.dao.LookupDao;
+import uz.javlon.model.Role;
 
 import java.util.List;
-import org.hibernate.Session;
 
 /**
  * Hibernate implementation of LookupDao.

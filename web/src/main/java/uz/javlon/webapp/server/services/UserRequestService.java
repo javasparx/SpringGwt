@@ -1,16 +1,11 @@
 package uz.javlon.webapp.server.services;
 
-import java.util.List;
-
-import javax.ws.rs.DELETE;
-import javax.ws.rs.GET;
-import javax.ws.rs.POST;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-
+import org.springframework.security.access.prepost.PreAuthorize;
 import uz.javlon.model.User;
 import uz.javlon.service.UserExistsException;
-import org.springframework.security.access.prepost.PreAuthorize;
+
+import javax.ws.rs.*;
+import java.util.List;
 
 @Path("/usersService")
 public interface UserRequestService {
@@ -120,7 +115,7 @@ public interface UserRequestService {
 
     /**
      * 
-     * @param user
+     * @param userId
      */
     @DELETE
     @Path("removeUser/{id}")

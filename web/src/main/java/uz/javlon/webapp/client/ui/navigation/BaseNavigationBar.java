@@ -3,17 +3,16 @@
  */
 package uz.javlon.webapp.client.ui.navigation;
 
+import com.google.gwt.core.client.GWT;
+import com.google.gwt.place.shared.Place;
+import com.google.gwt.place.shared.PlaceChangeEvent;
+import com.google.gwt.user.client.ui.Composite;
 import uz.javlon.webapp.client.application.Application;
 import uz.javlon.webapp.client.application.ApplicationMenu;
 import uz.javlon.webapp.client.application.ApplicationResources;
 import uz.javlon.webapp.client.application.base.place.EntityProxyPlace;
 import uz.javlon.webapp.client.application.base.place.EntitySearchPlace;
 import uz.javlon.webapp.client.application.utils.menu.MenuItem;
-
-import com.google.gwt.core.client.GWT;
-import com.google.gwt.place.shared.Place;
-import com.google.gwt.place.shared.PlaceChangeEvent;
-import com.google.gwt.user.client.ui.Composite;
 
 /**
  * @author ivangsa

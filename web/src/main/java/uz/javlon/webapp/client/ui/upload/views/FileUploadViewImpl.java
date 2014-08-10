@@ -3,10 +3,6 @@
  */
 package uz.javlon.webapp.client.ui.upload.views;
 
-import java.util.List;
-
-import uz.javlon.webapp.client.ui.upload.FileUploadBean;
-
 import com.github.gwtbootstrap.client.ui.Alert;
 import com.github.gwtbootstrap.client.ui.FileUpload;
 import com.github.gwtbootstrap.client.ui.Form;
@@ -25,6 +21,9 @@ import com.google.gwt.uibinder.client.UiHandler;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.Widget;
+import uz.javlon.webapp.client.ui.upload.FileUploadBean;
+
+import java.util.List;
 
 /**
  * @author ivangsa

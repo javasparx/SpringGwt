@@ -3,10 +3,9 @@
  */
 package uz.javlon.webapp.client.proxies;
 
-import uz.javlon.model.LabelValue;
-
 import com.google.web.bindery.requestfactory.shared.ProxyFor;
 import com.google.web.bindery.requestfactory.shared.ValueProxy;
+import uz.javlon.model.LabelValue;
 
 /**
  * @author ivangsa

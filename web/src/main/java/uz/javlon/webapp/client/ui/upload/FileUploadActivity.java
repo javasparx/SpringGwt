@@ -3,22 +3,21 @@
  */
 package uz.javlon.webapp.client.ui.upload;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
-
-import uz.javlon.webapp.client.application.Application;
-import uz.javlon.webapp.client.application.base.activity.AbstractBaseActivity;
-import uz.javlon.webapp.client.ui.home.HomePlace;
-import uz.javlon.webapp.client.ui.upload.views.FileUploadView;
-import uz.javlon.webapp.client.ui.upload.views.UploadedFileView;
-
 import com.github.gwtbootstrap.client.ui.Form.SubmitCompleteEvent;
 import com.github.gwtbootstrap.client.ui.Form.SubmitEvent;
 import com.github.gwtbootstrap.client.ui.constants.AlertType;
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.user.client.ui.AcceptsOneWidget;
 import com.google.inject.Inject;
+import uz.javlon.webapp.client.application.Application;
+import uz.javlon.webapp.client.application.base.activity.AbstractBaseActivity;
+import uz.javlon.webapp.client.ui.home.HomePlace;
+import uz.javlon.webapp.client.ui.upload.views.FileUploadView;
+import uz.javlon.webapp.client.ui.upload.views.UploadedFileView;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
 
 /**
  * @author ivangsa

@@ -1,9 +1,9 @@
 package uz.javlon.service.impl;
 
-import uz.javlon.service.UserManager;
 import org.junit.Ignore;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import uz.javlon.service.UserManager;
 
 /**
  * 

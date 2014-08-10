@@ -3,17 +3,16 @@
  */
 package uz.javlon.webapp.client.ui.reloadOptions;
 
-import uz.javlon.webapp.client.application.Application;
-import uz.javlon.webapp.client.application.base.activity.AbstractBaseActivity;
-import uz.javlon.webapp.client.proxies.LookupConstantsProxy;
-import uz.javlon.webapp.client.ui.home.HomePlace;
-
 import com.github.gwtbootstrap.client.ui.constants.AlertType;
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.user.client.ui.AcceptsOneWidget;
 import com.google.inject.Inject;
 import com.google.web.bindery.requestfactory.shared.Receiver;
 import com.google.web.bindery.requestfactory.shared.ServerFailure;
+import uz.javlon.webapp.client.application.Application;
+import uz.javlon.webapp.client.application.base.activity.AbstractBaseActivity;
+import uz.javlon.webapp.client.proxies.LookupConstantsProxy;
+import uz.javlon.webapp.client.ui.home.HomePlace;
 
 /**
  * @author ivangsa

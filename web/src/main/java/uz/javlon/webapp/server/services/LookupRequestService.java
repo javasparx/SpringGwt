@@ -1,12 +1,12 @@
 package uz.javlon.webapp.server.services;
 
-import java.util.ArrayList;
-import java.util.List;
-
+import org.springframework.security.access.annotation.Secured;
 import uz.javlon.model.LabelValue;
 import uz.javlon.model.Role;
 import uz.javlon.webapp.client.proxies.LookupConstantsProxy;
-import org.springframework.security.access.annotation.Secured;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public interface LookupRequestService {
 

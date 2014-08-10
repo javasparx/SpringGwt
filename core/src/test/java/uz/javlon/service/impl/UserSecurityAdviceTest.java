@@ -1,11 +1,5 @@
 package uz.javlon.service.impl;
 
-import uz.javlon.Constants;
-import uz.javlon.dao.UserDao;
-import uz.javlon.model.Role;
-import uz.javlon.model.User;
-import uz.javlon.service.UserManager;
-import uz.javlon.service.UserSecurityAdvice;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -22,6 +16,12 @@ import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.context.SecurityContextImpl;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import uz.javlon.Constants;
+import uz.javlon.dao.UserDao;
+import uz.javlon.model.Role;
+import uz.javlon.model.User;
+import uz.javlon.service.UserManager;
+import uz.javlon.service.UserSecurityAdvice;
 
 import static org.junit.Assert.*;
 import static org.mockito.BDDMockito.given;

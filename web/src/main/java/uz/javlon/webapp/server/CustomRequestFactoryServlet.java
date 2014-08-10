@@ -1,20 +1,18 @@
 package uz.javlon.webapp.server;
 
-import java.lang.reflect.Method;
-
-import javax.servlet.http.HttpServletResponse;
-
-import org.springframework.context.ApplicationContext;
-import org.springframework.security.access.AccessDeniedException;
-import org.springframework.security.core.AuthenticationException;
-import org.springframework.web.context.support.WebApplicationContextUtils;
-
 import com.google.web.bindery.requestfactory.server.DefaultExceptionHandler;
 import com.google.web.bindery.requestfactory.server.RequestFactoryServlet;
 import com.google.web.bindery.requestfactory.server.ServiceLayerDecorator;
 import com.google.web.bindery.requestfactory.server.impl.FindService;
 import com.google.web.bindery.requestfactory.shared.Locator;
 import com.google.web.bindery.requestfactory.shared.ServerFailure;
+import org.springframework.context.ApplicationContext;
+import org.springframework.security.access.AccessDeniedException;
+import org.springframework.security.core.AuthenticationException;
+import org.springframework.web.context.support.WebApplicationContextUtils;
+
+import javax.servlet.http.HttpServletResponse;
+import java.lang.reflect.Method;
 
 public class CustomRequestFactoryServlet extends RequestFactoryServlet {
 

@@ -1,14 +1,13 @@
 package uz.javlon.webapp.client.application.utils.menu;
 
+import com.google.gwt.dom.client.Element;
+import com.google.gwt.place.shared.Place;
+import uz.javlon.webapp.client.proxies.RoleProxy;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
-
-import uz.javlon.webapp.client.proxies.RoleProxy;
-
-import com.google.gwt.dom.client.Element;
-import com.google.gwt.place.shared.Place;
 
 public class MenuItem implements Iterable<MenuItem>{
 
@@ -21,7 +20,7 @@ public class MenuItem implements Iterable<MenuItem>{
 
     /**
      * @param title
-     * @param children
+     * @param roles
      */
     public MenuItem(final String title, final String... roles) {
         this(title, null, roles);

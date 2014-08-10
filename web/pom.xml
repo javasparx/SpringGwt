@@ -176,7 +176,7 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
-                <version>1.2</version>
+                <version>1.3.2</version>
                 <executions>
                     <execution>
                         <phase>process-classes</phase>
@@ -220,6 +220,18 @@
     </build>
 
     <dependencies>
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>jquery</artifactId>
+            <version>1.9.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>bootstrap</artifactId>
+            <version>3.0.2</version>
+        </dependency>
+
+
         <dependency>
             <groupId>${project.parent.groupId}</groupId>
             <artifactId>SpringGwt-core</artifactId>
@@ -407,6 +419,7 @@
                         <artifactId>dbunit-maven-plugin</artifactId>
                         <configuration>
                             <src>src/main/resources/default-data.xml</src>
+                            <url>${jdbc.url}</url>
                         </configuration>
                     </plugin>
                 </plugins>

@@ -3,16 +3,15 @@
  */
 package uz.javlon.webapp.client.ui.logout;
 
-import uz.javlon.webapp.client.application.Application;
-import uz.javlon.webapp.client.application.base.activity.AbstractBaseActivity;
-import uz.javlon.webapp.client.application.base.security.LogoutEvent;
-
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.user.client.Cookies;
 import com.google.gwt.user.client.ui.AcceptsOneWidget;
 import com.google.inject.Inject;
 import com.google.web.bindery.requestfactory.shared.Receiver;
 import com.google.web.bindery.requestfactory.shared.ServerFailure;
+import uz.javlon.webapp.client.application.Application;
+import uz.javlon.webapp.client.application.base.activity.AbstractBaseActivity;
+import uz.javlon.webapp.client.application.base.security.LogoutEvent;
 
 /**
  * @author ivangsa

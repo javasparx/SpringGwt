@@ -3,15 +3,6 @@
  */
 package uz.javlon.webapp.client.application;
 
-import static com.google.web.bindery.autobean.shared.AutoBeanUtils.getAutoBean;
-
-import java.util.HashMap;
-import java.util.Map;
-
-import uz.javlon.webapp.client.proxies.UserProxy;
-import uz.javlon.webapp.client.proxies.UsersSearchCriteriaProxy;
-import uz.javlon.webapp.client.requests.ApplicationRequestFactory;
-
 import com.google.gwt.core.shared.GWT;
 import com.google.inject.Inject;
 import com.google.web.bindery.autobean.shared.AutoBean;
@@ -21,6 +12,14 @@ import com.google.web.bindery.requestfactory.shared.BaseProxy;
 import com.google.web.bindery.requestfactory.shared.EntityProxy;
 import com.google.web.bindery.requestfactory.shared.impl.AbstractRequestFactory;
 import com.google.web.bindery.requestfactory.shared.impl.Constants;
+import uz.javlon.webapp.client.proxies.UserProxy;
+import uz.javlon.webapp.client.proxies.UsersSearchCriteriaProxy;
+import uz.javlon.webapp.client.requests.ApplicationRequestFactory;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import static com.google.web.bindery.autobean.shared.AutoBeanUtils.getAutoBean;
 
 /**
  * @author ivangsa

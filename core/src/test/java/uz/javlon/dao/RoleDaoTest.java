@@ -1,9 +1,9 @@
 package uz.javlon.dao;
 
-import uz.javlon.Constants;
-import uz.javlon.model.Role;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import uz.javlon.Constants;
+import uz.javlon.model.Role;
 
 import java.util.HashMap;
 import java.util.List;

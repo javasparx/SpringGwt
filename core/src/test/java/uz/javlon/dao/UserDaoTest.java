@@ -1,13 +1,13 @@
 package uz.javlon.dao;
 
-import uz.javlon.Constants;
-import uz.javlon.model.Address;
-import uz.javlon.model.Role;
-import uz.javlon.model.User;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.dao.DataIntegrityViolationException;
+import uz.javlon.Constants;
+import uz.javlon.model.Address;
+import uz.javlon.model.Role;
+import uz.javlon.model.User;
 
 import java.util.List;
 

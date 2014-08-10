@@ -1,11 +1,11 @@
 package uz.javlon.webapp.listener;
 
 import junit.framework.TestCase;
-import uz.javlon.Constants;
 import org.springframework.mock.web.MockServletContext;
 import org.springframework.web.context.ContextLoader;
 import org.springframework.web.context.ContextLoaderListener;
 import org.springframework.web.context.WebApplicationContext;
+import uz.javlon.Constants;
 
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;

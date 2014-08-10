@@ -3,17 +3,16 @@
  */
 package uz.javlon.webapp.client.application;
 
-import javax.validation.Validator;
-
+import com.google.gwt.core.client.GWT;
+import com.google.gwt.validation.client.AbstractGwtValidatorFactory;
+import com.google.gwt.validation.client.GwtValidation;
+import com.google.gwt.validation.client.impl.AbstractGwtValidator;
 import uz.javlon.webapp.client.proxies.UserProxy;
 import uz.javlon.webapp.client.ui.login.LoginView;
 import uz.javlon.webapp.client.ui.upload.FileUploadBean;
 import uz.javlon.webapp.client.ui.users.updatePassword.UpdatePasswordView;
 
-import com.google.gwt.core.client.GWT;
-import com.google.gwt.validation.client.AbstractGwtValidatorFactory;
-import com.google.gwt.validation.client.GwtValidation;
-import com.google.gwt.validation.client.impl.AbstractGwtValidator;
+import javax.validation.Validator;
 
 /**
  * @author ivangsa

@@ -3,8 +3,6 @@
  */
 package uz.javlon.webapp.client.ui.upload.views;
 
-import uz.javlon.webapp.client.ui.upload.UploadedFileBean;
-
 import com.github.gwtbootstrap.client.ui.Button;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.dom.client.AnchorElement;
@@ -19,6 +17,7 @@ import com.google.gwt.uibinder.client.UiHandler;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.Widget;
+import uz.javlon.webapp.client.ui.upload.UploadedFileBean;
 
 /**
  * @author ivangsa

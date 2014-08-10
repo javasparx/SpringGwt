@@ -1,11 +1,10 @@
 package uz.javlon.webapp.client.proxies;
 
-import javax.validation.constraints.Size;
-
-import uz.javlon.model.Address;
-
 import com.google.web.bindery.requestfactory.shared.ProxyFor;
 import com.google.web.bindery.requestfactory.shared.ValueProxy;
+import uz.javlon.model.Address;
+
+import javax.validation.constraints.Size;
 
 @ProxyFor(Address.class)
 public interface AddressProxy extends ValueProxy {

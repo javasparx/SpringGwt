@@ -1,19 +1,18 @@
 package uz.javlon.webapp.client.application.base.activity;
 
-import javax.validation.Validator;
-import javax.validation.ValidatorFactory;
-
+import com.google.gwt.activity.shared.AbstractActivity;
+import com.google.gwt.dom.client.Document;
+import com.google.gwt.place.shared.Place;
+import com.google.gwt.place.shared.PlaceController;
+import com.google.web.bindery.event.shared.EventBus;
 import uz.javlon.webapp.client.application.Application;
 import uz.javlon.webapp.client.application.ApplicationProxyFactory;
 import uz.javlon.webapp.client.application.ApplicationResources;
 import uz.javlon.webapp.client.requests.ApplicationRequestFactory;
 import uz.javlon.webapp.client.ui.Shell;
 
-import com.google.gwt.activity.shared.AbstractActivity;
-import com.google.gwt.dom.client.Document;
-import com.google.gwt.place.shared.Place;
-import com.google.gwt.place.shared.PlaceController;
-import com.google.web.bindery.event.shared.EventBus;
+import javax.validation.Validator;
+import javax.validation.ValidatorFactory;
 
 public abstract class AbstractBaseActivity extends AbstractActivity {
 

@@ -4,10 +4,8 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import uz.javlon.dao.GenericDao;
 import uz.javlon.service.GenericManager;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 
 /**

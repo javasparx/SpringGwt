@@ -3,13 +3,6 @@
  */
 package uz.javlon.webapp.client.ui.users.active;
 
-import java.util.List;
-
-import uz.javlon.webapp.client.application.Application;
-import uz.javlon.webapp.client.application.base.activity.AbstractBaseActivity;
-import uz.javlon.webapp.client.proxies.UserProxy;
-import uz.javlon.webapp.client.ui.home.HomePlace;
-
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.user.cellview.client.CellTable;
 import com.google.gwt.user.cellview.client.ColumnSortEvent;
@@ -17,6 +10,12 @@ import com.google.gwt.user.cellview.client.ColumnSortEvent.Handler;
 import com.google.gwt.user.client.ui.AcceptsOneWidget;
 import com.google.inject.Inject;
 import com.google.web.bindery.requestfactory.shared.Receiver;
+import uz.javlon.webapp.client.application.Application;
+import uz.javlon.webapp.client.application.base.activity.AbstractBaseActivity;
+import uz.javlon.webapp.client.proxies.UserProxy;
+import uz.javlon.webapp.client.ui.home.HomePlace;
+
+import java.util.List;
 
 /**
  * @author ivangsa

@@ -3,9 +3,7 @@
  */
 package uz.javlon.webapp.client.application;
 
-import java.util.ArrayList;
-import java.util.List;
-
+import com.google.gwt.core.client.GWT;
 import uz.javlon.webapp.client.application.base.place.EntitySearchPlace;
 import uz.javlon.webapp.client.application.utils.menu.MenuItem;
 import uz.javlon.webapp.client.proxies.RoleProxy;
@@ -18,7 +16,8 @@ import uz.javlon.webapp.client.ui.upload.FileUploadPlace;
 import uz.javlon.webapp.client.ui.users.active.ActiveUsersPlace;
 import uz.javlon.webapp.client.ui.users.editProfile.EditProfilePlace;
 
-import com.google.gwt.core.client.GWT;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author ivangsa

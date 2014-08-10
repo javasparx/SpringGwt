@@ -3,6 +3,12 @@
  */
 package uz.javlon.webapp.client.ui.users.editUser;
 
+import com.google.gwt.event.shared.EventBus;
+import com.google.gwt.place.shared.Place;
+import com.google.gwt.user.client.ui.AcceptsOneWidget;
+import com.google.inject.Inject;
+import com.google.web.bindery.requestfactory.shared.Request;
+import com.google.web.bindery.requestfactory.shared.RequestContext;
 import uz.javlon.webapp.client.application.Application;
 import uz.javlon.webapp.client.application.base.activity.AbstractProxyEditActivity;
 import uz.javlon.webapp.client.application.base.place.EntitySearchPlace;
@@ -11,13 +17,6 @@ import uz.javlon.webapp.client.proxies.UserProxy;
 import uz.javlon.webapp.client.requests.UserRequest;
 import uz.javlon.webapp.client.ui.home.HomePlace;
 import uz.javlon.webapp.client.ui.users.updatePassword.UpdatePasswordPlace;
-
-import com.google.gwt.event.shared.EventBus;
-import com.google.gwt.place.shared.Place;
-import com.google.gwt.user.client.ui.AcceptsOneWidget;
-import com.google.inject.Inject;
-import com.google.web.bindery.requestfactory.shared.Request;
-import com.google.web.bindery.requestfactory.shared.RequestContext;
 
 /**
  * @author ivangsa

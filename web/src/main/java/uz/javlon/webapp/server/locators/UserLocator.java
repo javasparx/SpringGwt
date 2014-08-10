@@ -1,11 +1,10 @@
 package uz.javlon.webapp.server.locators;
 
-import uz.javlon.model.User;
-import uz.javlon.service.UserManager;
+import com.google.web.bindery.requestfactory.shared.Locator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-
-import com.google.web.bindery.requestfactory.shared.Locator;
+import uz.javlon.model.User;
+import uz.javlon.service.UserManager;
 
 @Component
 public class UserLocator extends Locator<User, Long> {

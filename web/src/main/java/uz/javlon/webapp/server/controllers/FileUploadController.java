@@ -1,19 +1,6 @@
 package uz.javlon.webapp.server.controllers;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.servlet.ServletContext;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
 import org.apache.commons.lang.StringUtils;
-import uz.javlon.Constants;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
@@ -30,6 +17,14 @@ import org.springframework.web.context.ServletContextAware;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
 import org.springframework.web.multipart.support.ByteArrayMultipartFileEditor;
+import uz.javlon.Constants;
+
+import javax.servlet.ServletContext;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Controller class to upload Files.

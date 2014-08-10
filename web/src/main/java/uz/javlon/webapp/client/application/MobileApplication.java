@@ -1,17 +1,16 @@
 package uz.javlon.webapp.client.application;
 
 
-import uz.javlon.webapp.client.application.base.security.LoginEvent;
-import uz.javlon.webapp.client.application.base.security.LogoutEvent;
-import uz.javlon.webapp.client.requests.ApplicationRequestFactory;
-import uz.javlon.webapp.client.ui.Shell;
-
 import com.google.gwt.activity.shared.ActivityManager;
 import com.google.gwt.place.shared.PlaceController;
 import com.google.gwt.place.shared.PlaceHistoryHandler;
 import com.google.gwt.place.shared.PlaceHistoryMapper;
 import com.google.inject.Inject;
 import com.google.web.bindery.event.shared.EventBus;
+import uz.javlon.webapp.client.application.base.security.LoginEvent;
+import uz.javlon.webapp.client.application.base.security.LogoutEvent;
+import uz.javlon.webapp.client.requests.ApplicationRequestFactory;
+import uz.javlon.webapp.client.ui.Shell;
 
 
 /**

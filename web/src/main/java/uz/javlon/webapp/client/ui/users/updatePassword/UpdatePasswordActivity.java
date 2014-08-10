@@ -3,10 +3,12 @@
  */
 package uz.javlon.webapp.client.ui.users.updatePassword;
 
-import java.util.Set;
-
-import javax.validation.ConstraintViolation;
-
+import com.github.gwtbootstrap.client.ui.constants.AlertType;
+import com.google.gwt.editor.client.EditorDriver;
+import com.google.gwt.event.shared.EventBus;
+import com.google.gwt.user.client.ui.AcceptsOneWidget;
+import com.google.inject.Inject;
+import com.google.web.bindery.requestfactory.shared.Receiver;
 import uz.javlon.webapp.client.application.Application;
 import uz.javlon.webapp.client.application.base.activity.AbstractBaseActivity;
 import uz.javlon.webapp.client.proxies.UserProxy;
@@ -14,12 +16,8 @@ import uz.javlon.webapp.client.ui.home.HomePlace;
 import uz.javlon.webapp.client.ui.login.LoginPlace;
 import uz.javlon.webapp.client.ui.users.updatePassword.UpdatePasswordView.UserCredentials;
 
-import com.github.gwtbootstrap.client.ui.constants.AlertType;
-import com.google.gwt.editor.client.EditorDriver;
-import com.google.gwt.event.shared.EventBus;
-import com.google.gwt.user.client.ui.AcceptsOneWidget;
-import com.google.inject.Inject;
-import com.google.web.bindery.requestfactory.shared.Receiver;
+import javax.validation.ConstraintViolation;
+import java.util.Set;
 
 /**
  * @author ivangsa

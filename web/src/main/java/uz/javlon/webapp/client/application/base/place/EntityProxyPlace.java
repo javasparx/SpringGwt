@@ -4,7 +4,6 @@ import com.google.gwt.place.shared.Place;
 import com.google.gwt.place.shared.PlaceTokenizer;
 import com.google.gwt.place.shared.Prefix;
 import com.google.web.bindery.requestfactory.shared.EntityProxy;
-import com.google.web.bindery.requestfactory.shared.EntityProxyId;
 import com.google.web.bindery.requestfactory.shared.RequestFactory;
 
 /**
@@ -73,7 +72,7 @@ public class EntityProxyPlace extends Place {
 		private final RequestFactory requests;
 
 		/**
-		 * @param proxyFactory
+		 * @param requests
 		 */
 		public Tokenizer(RequestFactory requests) {
 			super();

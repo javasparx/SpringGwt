@@ -1,11 +1,5 @@
 package uz.javlon.webapp.client.ui;
 
-import uz.javlon.webapp.client.application.Application;
-import uz.javlon.webapp.client.application.base.security.LoginEvent;
-import uz.javlon.webapp.client.application.base.security.LogoutEvent;
-import uz.javlon.webapp.client.ui.navigation.NavigationBar;
-import uz.javlon.webapp.client.ui.navigation.SideNavigationBar;
-
 import com.github.gwtbootstrap.client.ui.Alert;
 import com.github.gwtbootstrap.client.ui.base.AlertBase;
 import com.github.gwtbootstrap.client.ui.constants.AlertType;
@@ -19,6 +13,11 @@ import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.NotificationMole;
 import com.google.gwt.user.client.ui.Widget;
+import uz.javlon.webapp.client.application.Application;
+import uz.javlon.webapp.client.application.base.security.LoginEvent;
+import uz.javlon.webapp.client.application.base.security.LogoutEvent;
+import uz.javlon.webapp.client.ui.navigation.NavigationBar;
+import uz.javlon.webapp.client.ui.navigation.SideNavigationBar;
 
 /**
  * The outermost UI of the application.

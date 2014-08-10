@@ -1,14 +1,13 @@
 package uz.javlon.webapp.client.ui;
 
-import uz.javlon.webapp.client.application.base.security.LoginEvent;
-import uz.javlon.webapp.client.application.base.security.LogoutEvent;
-
 import com.github.gwtbootstrap.client.ui.base.AlertBase;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Widget;
+import uz.javlon.webapp.client.application.base.security.LoginEvent;
+import uz.javlon.webapp.client.application.base.security.LogoutEvent;
 
 /**
  * Top level UI for the mobile version of the application.

@@ -3,10 +3,10 @@
  */
 package uz.javlon.webapp.client.ui.users.updatePassword;
 
-import javax.validation.constraints.NotNull;
-
 import com.google.gwt.editor.client.EditorDriver;
 import com.google.gwt.user.client.ui.IsWidget;
+
+import javax.validation.constraints.NotNull;
 
 /**
  * @author ivangsa

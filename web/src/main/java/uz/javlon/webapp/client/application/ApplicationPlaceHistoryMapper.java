@@ -1,5 +1,7 @@
 package uz.javlon.webapp.client.application;
 
+import com.google.gwt.place.shared.PlaceHistoryMapperWithFactory;
+import com.google.gwt.place.shared.WithTokenizers;
 import uz.javlon.webapp.client.ui.home.HomePlace;
 import uz.javlon.webapp.client.ui.login.LoginPlace;
 import uz.javlon.webapp.client.ui.logout.LogoutPlace;
@@ -9,9 +11,6 @@ import uz.javlon.webapp.client.ui.users.active.ActiveUsersPlace;
 import uz.javlon.webapp.client.ui.users.editProfile.EditProfilePlace;
 import uz.javlon.webapp.client.ui.users.signUp.SignUpPlace;
 import uz.javlon.webapp.client.ui.users.updatePassword.UpdatePasswordPlace;
-
-import com.google.gwt.place.shared.PlaceHistoryMapperWithFactory;
-import com.google.gwt.place.shared.WithTokenizers;
 
 @WithTokenizers({
 	HomePlace.Tokenizer.class,

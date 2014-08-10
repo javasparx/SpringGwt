@@ -1,9 +1,8 @@
 package uz.javlon.webapp.client.ui.upload.views;
 
-import uz.javlon.webapp.client.ui.upload.UploadedFileBean;
-
 import com.google.gwt.editor.client.EditorDriver;
 import com.google.gwt.user.client.ui.IsWidget;
+import uz.javlon.webapp.client.ui.upload.UploadedFileBean;
 
 public interface UploadedFileView extends IsWidget {
 	

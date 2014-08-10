@@ -2,17 +2,16 @@ package uz.javlon.webapp.listener;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import uz.javlon.Constants;
-import uz.javlon.service.GenericManager;
-import uz.javlon.service.LookupManager;
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.ProviderManager;
 import org.springframework.security.authentication.RememberMeAuthenticationProvider;
-
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.context.support.WebApplicationContextUtils;
+import uz.javlon.Constants;
+import uz.javlon.service.GenericManager;
+import uz.javlon.service.LookupManager;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;

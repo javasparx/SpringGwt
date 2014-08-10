@@ -3,21 +3,10 @@
  */
 package uz.javlon.webapp.server.services.impl;
 
-import java.io.Serializable;
-import java.util.HashMap;
-import java.util.Locale;
-import java.util.Map;
-
-import javax.servlet.ServletContext;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.ws.rs.core.Context;
-
+import com.google.web.bindery.requestfactory.server.RequestFactoryServlet;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.cxf.jaxrs.ext.MessageContext;
-import uz.javlon.model.User;
-import uz.javlon.service.MailEngine;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.MessageSource;
@@ -27,8 +16,17 @@ import org.springframework.security.authentication.AuthenticationTrustResolverIm
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.context.ServletContextAware;
+import uz.javlon.model.User;
+import uz.javlon.service.MailEngine;
 
-import com.google.web.bindery.requestfactory.server.RequestFactoryServlet;
+import javax.servlet.ServletContext;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.ws.rs.core.Context;
+import java.io.Serializable;
+import java.util.HashMap;
+import java.util.Locale;
+import java.util.Map;
 
 /**
  * @author ivangsa

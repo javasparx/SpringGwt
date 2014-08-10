@@ -3,15 +3,6 @@
  */
 package uz.javlon.webapp.client.application;
 
-import javax.validation.Validation;
-import javax.validation.ValidatorFactory;
-
-import uz.javlon.webapp.client.proxies.LookupConstantsProxy;
-import uz.javlon.webapp.client.proxies.RoleProxy;
-import uz.javlon.webapp.client.proxies.UserProxy;
-import uz.javlon.webapp.client.requests.ApplicationRequestFactory;
-import uz.javlon.webapp.client.ui.Shell;
-
 import com.google.gwt.activity.shared.ActivityManager;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.dom.client.Document;
@@ -23,6 +14,14 @@ import com.google.gwt.place.shared.PlaceHistoryHandler;
 import com.google.gwt.place.shared.PlaceHistoryMapper;
 import com.google.inject.Inject;
 import com.google.web.bindery.event.shared.EventBus;
+import uz.javlon.webapp.client.proxies.LookupConstantsProxy;
+import uz.javlon.webapp.client.proxies.RoleProxy;
+import uz.javlon.webapp.client.proxies.UserProxy;
+import uz.javlon.webapp.client.requests.ApplicationRequestFactory;
+import uz.javlon.webapp.client.ui.Shell;
+
+import javax.validation.Validation;
+import javax.validation.ValidatorFactory;
 
 
 /**

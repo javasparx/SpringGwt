@@ -1,10 +1,10 @@
 package uz.javlon.dao;
 
-import uz.javlon.model.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
+import uz.javlon.model.User;
 
 import java.util.List;
 

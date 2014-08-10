@@ -3,12 +3,11 @@
  */
 package uz.javlon.webapp.client.ui.home;
 
-import uz.javlon.webapp.client.application.Application;
-import uz.javlon.webapp.client.application.base.activity.AbstractBaseActivity;
-
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.user.client.ui.AcceptsOneWidget;
 import com.google.inject.Inject;
+import uz.javlon.webapp.client.application.Application;
+import uz.javlon.webapp.client.application.base.activity.AbstractBaseActivity;
 
 /**
  * @author ivangsa

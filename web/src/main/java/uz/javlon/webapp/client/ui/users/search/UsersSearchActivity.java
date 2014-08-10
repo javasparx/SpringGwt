@@ -3,16 +3,6 @@
  */
 package uz.javlon.webapp.client.ui.users.search;
 
-import java.util.List;
-
-import uz.javlon.webapp.client.application.Application;
-import uz.javlon.webapp.client.application.base.activity.AbstractProxySearchActivity;
-import uz.javlon.webapp.client.application.utils.tables.CustomColumn;
-import uz.javlon.webapp.client.application.utils.tables.LocalColumnSortHandler;
-import uz.javlon.webapp.client.proxies.UserProxy;
-import uz.javlon.webapp.client.proxies.UsersSearchCriteriaProxy;
-import uz.javlon.webapp.client.requests.UserRequest;
-
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.user.cellview.client.Column;
 import com.google.gwt.user.cellview.client.ColumnSortEvent;
@@ -24,6 +14,15 @@ import com.google.gwt.view.client.Range;
 import com.google.inject.Inject;
 import com.google.web.bindery.requestfactory.shared.Request;
 import com.google.web.bindery.requestfactory.shared.RequestContext;
+import uz.javlon.webapp.client.application.Application;
+import uz.javlon.webapp.client.application.base.activity.AbstractProxySearchActivity;
+import uz.javlon.webapp.client.application.utils.tables.CustomColumn;
+import uz.javlon.webapp.client.application.utils.tables.LocalColumnSortHandler;
+import uz.javlon.webapp.client.proxies.UserProxy;
+import uz.javlon.webapp.client.proxies.UsersSearchCriteriaProxy;
+import uz.javlon.webapp.client.requests.UserRequest;
+
+import java.util.List;
 
 /**
  * @author ivangsa

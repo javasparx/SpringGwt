@@ -1,12 +1,12 @@
 package uz.javlon.dao.hibernate;
 
-import uz.javlon.dao.RoleDao;
-import uz.javlon.model.Role;
-import java.util.List;
-import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
+import uz.javlon.dao.RoleDao;
+import uz.javlon.model.Role;
+
+import java.util.List;
 
 
 /**

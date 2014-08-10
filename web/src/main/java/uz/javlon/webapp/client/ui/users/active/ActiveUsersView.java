@@ -3,10 +3,9 @@
  */
 package uz.javlon.webapp.client.ui.users.active;
 
-import uz.javlon.webapp.client.proxies.UserProxy;
-
 import com.google.gwt.user.cellview.client.CellTable;
 import com.google.gwt.user.client.ui.IsWidget;
+import uz.javlon.webapp.client.proxies.UserProxy;
 
 /**
  * @author ivangsa

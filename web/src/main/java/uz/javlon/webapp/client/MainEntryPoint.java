@@ -3,10 +3,9 @@
  */
 package uz.javlon.webapp.client;
 
-import uz.javlon.webapp.client.application.ioc.ClientInjector;
-
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
+import uz.javlon.webapp.client.application.ioc.ClientInjector;
 
 /**
  * @author ivangsa

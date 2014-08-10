@@ -3,9 +3,9 @@ package uz.javlon.service.impl;
 import org.apache.commons.beanutils.BeanUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import uz.javlon.util.ConvertUtil;
 import org.junit.runner.RunWith;
 import org.mockito.runners.MockitoJUnitRunner;
+import uz.javlon.util.ConvertUtil;
 
 import java.util.Map;
 import java.util.MissingResourceException;

@@ -1,12 +1,5 @@
 package uz.javlon.webapp.client.ui.users.active;
 
-import java.util.HashSet;
-import java.util.Set;
-
-import uz.javlon.webapp.client.application.ApplicationResources;
-import uz.javlon.webapp.client.application.utils.tables.CustomColumn;
-import uz.javlon.webapp.client.proxies.UserProxy;
-
 import com.github.gwtbootstrap.client.ui.Button;
 import com.google.gwt.cell.client.Cell.Context;
 import com.google.gwt.core.client.GWT;
@@ -20,6 +13,12 @@ import com.google.gwt.user.cellview.client.CellTable;
 import com.google.gwt.user.cellview.client.HasKeyboardSelectionPolicy.KeyboardSelectionPolicy;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.Widget;
+import uz.javlon.webapp.client.application.ApplicationResources;
+import uz.javlon.webapp.client.application.utils.tables.CustomColumn;
+import uz.javlon.webapp.client.proxies.UserProxy;
+
+import java.util.HashSet;
+import java.util.Set;
 
 public class ActiveUsersViewImpl extends Composite implements ActiveUsersView{
 

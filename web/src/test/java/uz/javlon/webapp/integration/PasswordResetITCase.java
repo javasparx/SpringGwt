@@ -3,14 +3,14 @@
  */
 package uz.javlon.webapp.integration;
 
-import static org.junit.Assert.assertTrue;
+import org.junit.Assert;
+import org.junit.Test;
+import org.openqa.selenium.By;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.junit.Assert;
-import org.junit.Test;
-import org.openqa.selenium.By;
+import static org.junit.Assert.assertTrue;
 
 /**
  * @author ivangsa

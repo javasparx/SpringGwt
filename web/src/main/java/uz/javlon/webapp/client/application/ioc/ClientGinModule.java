@@ -1,12 +1,18 @@
 package uz.javlon.webapp.client.application.ioc;
 
 
-import uz.javlon.webapp.client.application.Application;
-import uz.javlon.webapp.client.application.ApplicationActivityMapper;
-import uz.javlon.webapp.client.application.ApplicationPlaceHistoryFactory;
-import uz.javlon.webapp.client.application.ApplicationPlaceHistoryMapper;
-import uz.javlon.webapp.client.application.ApplicationProxyFactory;
-import uz.javlon.webapp.client.application.DesktopApplication;
+import com.google.gwt.activity.shared.ActivityManager;
+import com.google.gwt.activity.shared.ActivityMapper;
+import com.google.gwt.core.client.GWT;
+import com.google.gwt.inject.client.AbstractGinModule;
+import com.google.gwt.place.shared.PlaceController;
+import com.google.gwt.place.shared.PlaceHistoryHandler;
+import com.google.gwt.place.shared.PlaceHistoryMapper;
+import com.google.inject.Provides;
+import com.google.inject.Singleton;
+import com.google.web.bindery.event.shared.EventBus;
+import com.google.web.bindery.event.shared.SimpleEventBus;
+import uz.javlon.webapp.client.application.*;
 import uz.javlon.webapp.client.application.base.request.EventSourceRequestTransport;
 import uz.javlon.webapp.client.requests.ApplicationRequestFactory;
 import uz.javlon.webapp.client.ui.home.HomeActivity;
@@ -39,18 +45,6 @@ import uz.javlon.webapp.client.ui.users.signUp.SignUpView;
 import uz.javlon.webapp.client.ui.users.signUp.SignUpViewImpl;
 import uz.javlon.webapp.client.ui.users.updatePassword.UpdatePasswordView;
 import uz.javlon.webapp.client.ui.users.updatePassword.UpdatePasswordViewImpl;
-
-import com.google.gwt.activity.shared.ActivityManager;
-import com.google.gwt.activity.shared.ActivityMapper;
-import com.google.gwt.core.client.GWT;
-import com.google.gwt.inject.client.AbstractGinModule;
-import com.google.gwt.place.shared.PlaceController;
-import com.google.gwt.place.shared.PlaceHistoryHandler;
-import com.google.gwt.place.shared.PlaceHistoryMapper;
-import com.google.inject.Provides;
-import com.google.inject.Singleton;
-import com.google.web.bindery.event.shared.EventBus;
-import com.google.web.bindery.event.shared.SimpleEventBus;
 
 
 public class ClientGinModule extends AbstractGinModule {

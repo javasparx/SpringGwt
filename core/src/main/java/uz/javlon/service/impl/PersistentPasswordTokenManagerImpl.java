@@ -3,16 +3,15 @@
  */
 package uz.javlon.service.impl;
 
-import java.util.Date;
-
-import javax.sql.DataSource;
-
 import org.apache.commons.lang.RandomStringUtils;
 import org.apache.commons.lang.math.RandomUtils;
 import org.apache.commons.lang.time.DateUtils;
-import uz.javlon.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import uz.javlon.model.User;
+
+import javax.sql.DataSource;
+import java.util.Date;
 
 /**
  * Provides {@link PasswordTokenManager} functionality generating and persisting

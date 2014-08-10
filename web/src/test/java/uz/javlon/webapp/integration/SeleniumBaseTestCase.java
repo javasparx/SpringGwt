@@ -1,23 +1,11 @@
 package uz.javlon.webapp.integration;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.TimeUnit;
-
-import javax.mail.MessagingException;
-import javax.mail.internet.MimeMessage;
-
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.runner.RunWith;
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Dimension;
-import org.openqa.selenium.NoAlertPresentException;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.test.context.ContextConfiguration;
@@ -25,6 +13,12 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.subethamail.wiser.Wiser;
 import org.subethamail.wiser.WiserMessage;
 import org.tuckey.web.filters.urlrewrite.utils.StringUtils;
+
+import javax.mail.MessagingException;
+import javax.mail.internet.MimeMessage;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 @ContextConfiguration(locations = {
         "classpath:/applicationContext-resources.xml"

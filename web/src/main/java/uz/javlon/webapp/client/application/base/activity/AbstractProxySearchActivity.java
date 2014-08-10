@@ -1,17 +1,5 @@
 package uz.javlon.webapp.client.application.base.activity;
 
-import java.util.List;
-import java.util.Set;
-import java.util.logging.Logger;
-
-import javax.validation.ConstraintViolation;
-
-import uz.javlon.webapp.client.application.Application;
-import uz.javlon.webapp.client.application.base.place.EntityProxyPlace;
-import uz.javlon.webapp.client.application.base.place.EntitySearchPlace;
-import uz.javlon.webapp.client.application.base.view.ProxySearchView;
-import uz.javlon.webapp.client.ui.home.HomePlace;
-
 import com.google.gwt.activity.shared.Activity;
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.event.shared.HandlerRegistration;
@@ -22,11 +10,17 @@ import com.google.gwt.user.client.ui.AcceptsOneWidget;
 import com.google.gwt.view.client.HasData;
 import com.google.gwt.view.client.Range;
 import com.google.gwt.view.client.RangeChangeEvent;
-import com.google.web.bindery.requestfactory.shared.BaseProxy;
-import com.google.web.bindery.requestfactory.shared.EntityProxy;
-import com.google.web.bindery.requestfactory.shared.Receiver;
-import com.google.web.bindery.requestfactory.shared.Request;
-import com.google.web.bindery.requestfactory.shared.RequestContext;
+import com.google.web.bindery.requestfactory.shared.*;
+import uz.javlon.webapp.client.application.Application;
+import uz.javlon.webapp.client.application.base.place.EntityProxyPlace;
+import uz.javlon.webapp.client.application.base.place.EntitySearchPlace;
+import uz.javlon.webapp.client.application.base.view.ProxySearchView;
+import uz.javlon.webapp.client.ui.home.HomePlace;
+
+import javax.validation.ConstraintViolation;
+import java.util.List;
+import java.util.Set;
+import java.util.logging.Logger;
 
 /**
  * Abstract activity for displaying a list of {@link EntityProxy}. These

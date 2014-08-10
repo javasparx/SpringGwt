@@ -3,20 +3,7 @@
  */
 package uz.javlon.webapp.client.ui.users.editUser;
 
-import java.util.List;
-
-import uz.javlon.webapp.client.application.ApplicationResources;
-import uz.javlon.webapp.client.proxies.LabelValueProxy;
-import uz.javlon.webapp.client.proxies.RoleProxy;
-import uz.javlon.webapp.client.proxies.UserProxy;
-
-import com.github.gwtbootstrap.client.ui.Button;
-import com.github.gwtbootstrap.client.ui.CheckBox;
-import com.github.gwtbootstrap.client.ui.IntegerBox;
-import com.github.gwtbootstrap.client.ui.ListBox;
-import com.github.gwtbootstrap.client.ui.LongBox;
-import com.github.gwtbootstrap.client.ui.PasswordTextBox;
-import com.github.gwtbootstrap.client.ui.TextBox;
+import com.github.gwtbootstrap.client.ui.*;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.editor.client.EditorError;
@@ -31,6 +18,12 @@ import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.UIObject;
 import com.google.gwt.user.client.ui.Widget;
 import com.google.web.bindery.requestfactory.gwt.client.RequestFactoryEditorDriver;
+import uz.javlon.webapp.client.application.ApplicationResources;
+import uz.javlon.webapp.client.proxies.LabelValueProxy;
+import uz.javlon.webapp.client.proxies.RoleProxy;
+import uz.javlon.webapp.client.proxies.UserProxy;
+
+import java.util.List;
 
 /**
  * @author ivangsa

@@ -3,12 +3,11 @@
  */
 package uz.javlon.webapp.client.proxies;
 
-import java.util.List;
-
-import uz.javlon.webapp.server.services.LookupRequestService.LookupConstants;
-
 import com.google.web.bindery.requestfactory.shared.ProxyFor;
 import com.google.web.bindery.requestfactory.shared.ValueProxy;
+import uz.javlon.webapp.server.services.LookupRequestService.LookupConstants;
+
+import java.util.List;
 
 /**
  * @author ivangsa

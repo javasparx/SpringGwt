@@ -3,15 +3,14 @@
  */
 package uz.javlon.webapp.client.application.base.place;
 
-import java.util.logging.Logger;
-
-import uz.javlon.webapp.client.application.ApplicationProxyFactory;
-
 import com.google.gwt.place.shared.Place;
 import com.google.gwt.place.shared.PlaceTokenizer;
 import com.google.gwt.place.shared.Prefix;
 import com.google.web.bindery.requestfactory.shared.EntityProxy;
 import com.google.web.bindery.requestfactory.shared.RequestFactory;
+import uz.javlon.webapp.client.application.ApplicationProxyFactory;
+
+import java.util.logging.Logger;
 
 /**
  * @author ivangsa
@@ -26,7 +25,7 @@ public class EntitySearchPlace extends Place {
 	private int maxResults = 25;
 
 	/**
-	 * @param proxyType
+	 * @param proxyClass
 	 */
 	public EntitySearchPlace(Class<? extends EntityProxy> proxyClass) {
 		this.proxyClass = proxyClass;
@@ -34,7 +33,7 @@ public class EntitySearchPlace extends Place {
 	}
 	
 	/**
-	 * @param proxyType
+	 * @param proxyClass
 	 * @param searchCriteria
 	 */
 	public EntitySearchPlace(Class<? extends EntityProxy> proxyClass, Object searchCriteria) {

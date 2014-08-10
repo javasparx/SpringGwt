@@ -3,6 +3,12 @@
  */
 package uz.javlon.webapp.client.application;
 
+import com.google.gwt.activity.shared.Activity;
+import com.google.gwt.activity.shared.ActivityMapper;
+import com.google.gwt.inject.client.AsyncProvider;
+import com.google.gwt.place.shared.Place;
+import com.google.inject.Inject;
+import com.google.inject.Provider;
 import uz.javlon.webapp.client.application.base.activity.AsyncActivityProxy;
 import uz.javlon.webapp.client.application.base.place.EntityProxyPlace;
 import uz.javlon.webapp.client.application.base.place.EntitySearchPlace;
@@ -27,13 +33,6 @@ import uz.javlon.webapp.client.ui.users.signUp.SignUpActivity;
 import uz.javlon.webapp.client.ui.users.signUp.SignUpPlace;
 import uz.javlon.webapp.client.ui.users.updatePassword.UpdatePasswordActivity;
 import uz.javlon.webapp.client.ui.users.updatePassword.UpdatePasswordPlace;
-
-import com.google.gwt.activity.shared.Activity;
-import com.google.gwt.activity.shared.ActivityMapper;
-import com.google.gwt.inject.client.AsyncProvider;
-import com.google.gwt.place.shared.Place;
-import com.google.inject.Inject;
-import com.google.inject.Provider;
 
 /**
  * @author ivangsa

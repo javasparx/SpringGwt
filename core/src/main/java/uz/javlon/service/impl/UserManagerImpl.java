@@ -1,18 +1,18 @@
 package uz.javlon.service.impl;
 
 import org.apache.commons.lang.StringUtils;
-import uz.javlon.dao.UserDao;
-import uz.javlon.model.User;
-import uz.javlon.service.MailEngine;
-import uz.javlon.service.UserExistsException;
-import uz.javlon.service.UserManager;
-import uz.javlon.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import uz.javlon.dao.UserDao;
+import uz.javlon.model.User;
+import uz.javlon.service.MailEngine;
+import uz.javlon.service.UserExistsException;
+import uz.javlon.service.UserManager;
+import uz.javlon.service.UserService;
 
 import javax.jws.WebService;
 import java.io.Serializable;

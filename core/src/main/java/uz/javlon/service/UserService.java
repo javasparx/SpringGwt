@@ -3,11 +3,7 @@ package uz.javlon.service;
 import uz.javlon.model.User;
 
 import javax.jws.WebService;
-import javax.ws.rs.DELETE;
-import javax.ws.rs.GET;
-import javax.ws.rs.POST;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
+import javax.ws.rs.*;
 import java.util.List;
 
 /**

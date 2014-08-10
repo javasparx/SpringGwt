@@ -3,20 +3,16 @@ package uz.javlon.dao;
 import org.apache.commons.beanutils.BeanUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.search.FullTextSession;
+import org.hibernate.search.Search;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.AbstractTransactionalJUnit4SpringContextTests;
 
-import java.util.Enumeration;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.MissingResourceException;
-import java.util.ResourceBundle;
-import org.hibernate.Session;
-import org.hibernate.search.FullTextSession;
-import org.hibernate.search.Search;
+import java.util.*;
 
 /**
  * Base class for running DAO tests.

@@ -2,10 +2,10 @@ package uz.javlon.service;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import uz.javlon.Constants;
-import uz.javlon.model.User;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import uz.javlon.Constants;
+import uz.javlon.model.User;
 
 import java.util.List;
 

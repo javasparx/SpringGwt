@@ -1,12 +1,11 @@
 package uz.javlon.webapp.server;
 
-import javax.servlet.http.HttpServletRequest;
-
+import com.google.web.bindery.requestfactory.server.RequestFactoryServlet;
+import com.google.web.bindery.requestfactory.shared.ServiceLocator;
 import org.springframework.context.ApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
 
-import com.google.web.bindery.requestfactory.server.RequestFactoryServlet;
-import com.google.web.bindery.requestfactory.shared.ServiceLocator;
+import javax.servlet.http.HttpServletRequest;
 
 public class GwtServiceLocator implements ServiceLocator {
 

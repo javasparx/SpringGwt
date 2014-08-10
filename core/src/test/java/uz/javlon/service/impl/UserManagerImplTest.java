@@ -1,16 +1,15 @@
 package uz.javlon.service.impl;
 
-import uz.javlon.Constants;
-import uz.javlon.dao.RoleDao;
-import uz.javlon.dao.UserDao;
-import uz.javlon.model.Role;
-import uz.javlon.model.User;
-import uz.javlon.service.UserExistsException;
 import org.junit.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import uz.javlon.Constants;
+import uz.javlon.dao.UserDao;
+import uz.javlon.model.Role;
+import uz.javlon.model.User;
+import uz.javlon.service.UserExistsException;
 
 import static org.junit.Assert.*;
 import static org.mockito.BDDMockito.*;

@@ -3,19 +3,7 @@
  */
 package uz.javlon.webapp.client.ui.users.editUser;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-
-import uz.javlon.webapp.client.proxies.RoleProxy;
-
-import com.google.gwt.cell.client.AbstractCell;
-import com.google.gwt.cell.client.Cell;
-import com.google.gwt.cell.client.CheckboxCell;
-import com.google.gwt.cell.client.CompositeCell;
-import com.google.gwt.cell.client.FieldUpdater;
-import com.google.gwt.cell.client.HasCell;
+import com.google.gwt.cell.client.*;
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.editor.client.Editor;
 import com.google.gwt.editor.client.IsEditor;
@@ -24,6 +12,12 @@ import com.google.gwt.safehtml.shared.SafeHtmlBuilder;
 import com.google.gwt.safehtml.shared.SafeHtmlUtils;
 import com.google.gwt.user.cellview.client.CellList;
 import com.google.gwt.user.client.ui.CheckBox;
+import uz.javlon.webapp.client.proxies.RoleProxy;
+
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 
 

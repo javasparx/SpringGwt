@@ -1,11 +1,7 @@
 package uz.javlon.webapp.server.services;
 
-import java.util.List;
-
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import uz.javlon.model.User;
-import uz.javlon.service.UserManager;
 import org.junit.Before;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +12,10 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.subethamail.wiser.Wiser;
 import org.subethamail.wiser.WiserMessage;
+import uz.javlon.model.User;
+import uz.javlon.service.UserManager;
+
+import java.util.List;
 
 @ContextConfiguration(locations = {
         "classpath:/applicationContext-resources.xml",

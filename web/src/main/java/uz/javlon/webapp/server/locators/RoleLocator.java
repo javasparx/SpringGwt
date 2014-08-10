@@ -3,12 +3,11 @@
  */
 package uz.javlon.webapp.server.locators;
 
-import uz.javlon.model.Role;
-import uz.javlon.service.RoleManager;
+import com.google.web.bindery.requestfactory.shared.Locator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-
-import com.google.web.bindery.requestfactory.shared.Locator;
+import uz.javlon.model.Role;
+import uz.javlon.service.RoleManager;
 
 /**
  * @author ivangsa

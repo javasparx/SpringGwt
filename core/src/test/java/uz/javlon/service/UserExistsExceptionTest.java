@@ -2,12 +2,12 @@ package uz.javlon.service;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import uz.javlon.model.User;
 import org.junit.Test;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.AbstractTransactionalJUnit4SpringContextTests;
+import uz.javlon.model.User;
 
 import static org.junit.Assert.assertNotNull;
 

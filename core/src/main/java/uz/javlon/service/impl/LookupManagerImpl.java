@@ -1,11 +1,11 @@
 package uz.javlon.service.impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import uz.javlon.dao.LookupDao;
 import uz.javlon.model.LabelValue;
 import uz.javlon.model.Role;
 import uz.javlon.service.LookupManager;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;

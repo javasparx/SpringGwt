@@ -1,14 +1,12 @@
 package uz.javlon.webapp.client.application.base.view;
 
-import javax.validation.ConstraintViolation;
-
-import com.google.gwt.editor.client.EditorDriver;
 import com.google.gwt.user.cellview.client.ColumnSortEvent.Handler;
 import com.google.gwt.user.cellview.client.ColumnSortList;
 import com.google.gwt.user.client.ui.IsWidget;
 import com.google.gwt.view.client.HasData;
-import com.google.web.bindery.requestfactory.shared.BaseProxy;
 import com.google.web.bindery.requestfactory.shared.EntityProxy;
+
+import javax.validation.ConstraintViolation;
 
 /**
  * A view of a list of {@link EntityProxy}s, which declares which properties it

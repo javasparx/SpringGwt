@@ -1,13 +1,13 @@
 package uz.javlon.webapp.integration;
 
-import static org.junit.Assert.assertTrue;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
 import java.io.File;
 import java.util.Date;
 
-import org.junit.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
+import static org.junit.Assert.assertTrue;
 
 public class AppFuseWebITCase extends SeleniumBaseTestCase {
 

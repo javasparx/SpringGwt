@@ -20,7 +20,7 @@ pageContext.setAttribute("ctxPath", contextPath);
 	<c:set var="group" value="main" />
 	<c:choose>
 	    <c:when test="${param.debug}">
-	        <link rel="stylesheet" type="text/css" href="${base}/webjars/bootswatch/3.0.0/spacelab/bootstrap.min.css"/>
+	        <link rel="stylesheet" type="text/css" href="${base}/webjars/bootswatch/3.0.0/cosmo/bootstrap.min.css"/>
 	        <link rel="stylesheet" type="text/css" href="${base}/styles/style.css"/>
 	    </c:when>
 	    <c:otherwise>

@@ -4,12 +4,7 @@ import junit.framework.TestCase;
 import org.springframework.context.i18n.LocaleContextHolder;
 
 import java.sql.Timestamp;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
-import java.util.List;
-import java.util.Locale;
+import java.util.*;
 
 public class DateConverterTest extends TestCase {
 

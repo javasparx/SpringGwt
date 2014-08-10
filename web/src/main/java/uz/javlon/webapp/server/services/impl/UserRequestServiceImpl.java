@@ -1,18 +1,18 @@
 package uz.javlon.webapp.server.services.impl;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Locale;
-import java.util.Set;
-
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
 import org.apache.commons.lang.RandomStringUtils;
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.lang.math.RandomUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.support.PropertyComparator;
+import org.springframework.context.i18n.LocaleContextHolder;
+import org.springframework.mail.MailException;
+import org.springframework.security.access.AccessDeniedException;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.web.authentication.rememberme.TokenBasedRememberMeServices;
+import org.springframework.stereotype.Component;
 import uz.javlon.Constants;
 import uz.javlon.model.Role;
 import uz.javlon.model.User;
@@ -24,16 +24,11 @@ import uz.javlon.webapp.listener.UserCounterListener;
 import uz.javlon.webapp.server.services.UserRequestService;
 import uz.javlon.webapp.server.services.UsersSearchCriteria;
 import uz.javlon.webapp.util.RequestUtil;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.support.PropertyComparator;
-import org.springframework.context.i18n.LocaleContextHolder;
-import org.springframework.mail.MailException;
-import org.springframework.security.access.AccessDeniedException;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import org.springframework.security.web.authentication.rememberme.TokenBasedRememberMeServices;
-import org.springframework.stereotype.Component;
+
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.util.*;
 
 @Component("userRequestService")
 public class UserRequestServiceImpl extends AbstractBaseRequest implements UserRequestService {
@@ -220,7 +215,7 @@ public class UserRequestServiceImpl extends AbstractBaseRequest implements UserR
 
     /**
      * 
-     * @param user
+     * @param userId
      */
     @Override
     public void removeUser(final Long userId) {

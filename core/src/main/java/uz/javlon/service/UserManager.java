@@ -1,9 +1,9 @@
 package uz.javlon.service;
 
-import uz.javlon.dao.UserDao;
-import uz.javlon.model.User;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import uz.javlon.dao.UserDao;
+import uz.javlon.model.User;
 
 import java.util.List;
 
@@ -88,7 +88,7 @@ public interface UserManager extends GenericManager<User, Long> {
      * UrlTemplate should include two placeholders '{username}' for username and '{token}' for the recovery token.
      * 
      * @param user
-     * @param urlTemplateurl
+     * @param urlTemplate
      *            template including two placeholders '{username}' and '{token}'
      * @return
      */

@@ -106,7 +106,6 @@
     </build>
 
     <!-- Dependencies calculated by AppFuse when running full-source plugin -->
-    <!-- Dependencies calculated by AppFuse when running full-source plugin -->
     <dependencies>
         <dependency>
             <groupId>${jdbc.groupId}</groupId>
@@ -351,6 +350,7 @@
                         <artifactId>dbunit-maven-plugin</artifactId>
                         <configuration>
                             <src>src/main/resources/default-data.xml</src>
+                            <url>${jdbc.url}</url>
                         </configuration>
                     </plugin>
                 </plugins>

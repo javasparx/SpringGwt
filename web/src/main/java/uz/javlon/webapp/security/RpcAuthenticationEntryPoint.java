@@ -1,13 +1,12 @@
 package uz.javlon.webapp.security;
 
-import java.io.IOException;
+import org.springframework.security.core.AuthenticationException;
+import org.springframework.security.web.AuthenticationEntryPoint;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import org.springframework.security.core.AuthenticationException;
-import org.springframework.security.web.AuthenticationEntryPoint;
+import java.io.IOException;
 
 /**
  * Used to indicate RPC requests that login is required sending a '401' error, code.

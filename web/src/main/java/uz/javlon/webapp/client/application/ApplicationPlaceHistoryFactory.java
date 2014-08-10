@@ -1,10 +1,9 @@
 package uz.javlon.webapp.client.application;
 
+import com.google.inject.Inject;
 import uz.javlon.webapp.client.application.base.place.EntityProxyPlace;
 import uz.javlon.webapp.client.application.base.place.EntitySearchPlace;
 import uz.javlon.webapp.client.requests.ApplicationRequestFactory;
-
-import com.google.inject.Inject;
 
 public class ApplicationPlaceHistoryFactory {
 	private final EntityProxyPlace.Tokenizer entityPlaceTokenizer;

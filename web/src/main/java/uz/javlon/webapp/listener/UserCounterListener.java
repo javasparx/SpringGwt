@@ -1,12 +1,12 @@
 package uz.javlon.webapp.listener;
 
-import uz.javlon.model.User;
 import org.springframework.security.authentication.AuthenticationTrustResolver;
 import org.springframework.security.authentication.AuthenticationTrustResolverImpl;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.context.HttpSessionSecurityContextRepository;
+import uz.javlon.model.User;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;

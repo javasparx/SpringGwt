@@ -1,15 +1,14 @@
 package uz.javlon.webapp.client.requests;
 
-import java.util.List;
-
+import com.google.web.bindery.requestfactory.shared.Request;
+import com.google.web.bindery.requestfactory.shared.RequestContext;
+import com.google.web.bindery.requestfactory.shared.Service;
 import uz.javlon.webapp.client.proxies.UserProxy;
 import uz.javlon.webapp.client.proxies.UsersSearchCriteriaProxy;
 import uz.javlon.webapp.server.GwtServiceLocator;
 import uz.javlon.webapp.server.services.UserRequestService;
 
-import com.google.web.bindery.requestfactory.shared.Request;
-import com.google.web.bindery.requestfactory.shared.RequestContext;
-import com.google.web.bindery.requestfactory.shared.Service;
+import java.util.List;
 
 @Service(value = UserRequestService.class, locator=GwtServiceLocator.class)
 public interface UserRequest extends RequestContext {

@@ -2,8 +2,6 @@ package uz.javlon.service.impl;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import uz.javlon.model.User;
-import uz.javlon.service.UserManager;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -13,6 +11,8 @@ import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.AbstractTransactionalJUnit4SpringContextTests;
 import org.subethamail.wiser.Wiser;
+import uz.javlon.model.User;
+import uz.javlon.service.UserManager;
 
 import static org.junit.Assert.assertTrue;
 

@@ -2,14 +2,15 @@ package uz.javlon.dao;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import uz.javlon.dao.hibernate.GenericDaoHibernate;
-import uz.javlon.model.User;
 import org.hibernate.SessionFactory;
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import uz.javlon.dao.hibernate.GenericDaoHibernate;
+import uz.javlon.model.User;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 public class GenericDaoTest extends BaseDaoTestCase {
     Log log = LogFactory.getLog(GenericDaoTest.class);

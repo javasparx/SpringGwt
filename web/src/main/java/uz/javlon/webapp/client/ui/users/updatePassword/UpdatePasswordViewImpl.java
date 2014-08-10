@@ -3,8 +3,6 @@
  */
 package uz.javlon.webapp.client.ui.users.updatePassword;
 
-import uz.javlon.webapp.client.application.ApplicationResources;
-
 import com.github.gwtbootstrap.client.ui.Button;
 import com.github.gwtbootstrap.client.ui.Paragraph;
 import com.github.gwtbootstrap.client.ui.PasswordTextBox;
@@ -19,6 +17,7 @@ import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.uibinder.client.UiHandler;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.Widget;
+import uz.javlon.webapp.client.application.ApplicationResources;
 
 /**
  * @author ivangsa

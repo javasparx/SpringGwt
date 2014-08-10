@@ -1,10 +1,10 @@
 package uz.javlon.service.impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import uz.javlon.dao.RoleDao;
 import uz.javlon.model.Role;
 import uz.javlon.service.RoleManager;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 

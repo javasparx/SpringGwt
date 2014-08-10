@@ -3,9 +3,6 @@
  */
 package uz.javlon.webapp.client.ui.login;
 
-import uz.javlon.webapp.client.application.ApplicationResources;
-import uz.javlon.webapp.client.ui.users.signUp.SignUpPlace;
-
 import com.github.gwtbootstrap.client.ui.Button;
 import com.github.gwtbootstrap.client.ui.CheckBox;
 import com.github.gwtbootstrap.client.ui.PasswordTextBox;
@@ -24,11 +21,9 @@ import com.google.gwt.event.dom.client.KeyDownEvent;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.uibinder.client.UiHandler;
-import com.google.gwt.user.client.ui.Anchor;
-import com.google.gwt.user.client.ui.Composite;
-import com.google.gwt.user.client.ui.HTMLPanel;
-import com.google.gwt.user.client.ui.SimplePanel;
-import com.google.gwt.user.client.ui.Widget;
+import com.google.gwt.user.client.ui.*;
+import uz.javlon.webapp.client.application.ApplicationResources;
+import uz.javlon.webapp.client.ui.users.signUp.SignUpPlace;
 
 /**
  * @author ivangsa

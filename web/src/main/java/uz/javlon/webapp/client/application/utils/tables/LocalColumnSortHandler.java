@@ -1,17 +1,11 @@
 package uz.javlon.webapp.client.application.utils.tables;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import com.google.gwt.user.cellview.client.CellTable;
 import com.google.gwt.user.cellview.client.Column;
 import com.google.gwt.user.cellview.client.ColumnSortEvent;
 import com.google.gwt.user.cellview.client.ColumnSortEvent.Handler;
 import com.google.gwt.view.client.HasData;
+
+import java.util.*;
 
 /**
  * 
@@ -25,7 +19,7 @@ public abstract class LocalColumnSortHandler<T> implements Handler {
 	private final Map<Column<?, ?>, Comparator<T>> comparators = new HashMap<Column<?, ?>, Comparator<T>>();
 
 	/**
-	 * @param cellTable
+	 * @param hasData
 	 */
 	public LocalColumnSortHandler(HasData<T> hasData) {
 		super();

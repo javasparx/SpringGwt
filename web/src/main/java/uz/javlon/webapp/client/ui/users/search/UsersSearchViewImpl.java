@@ -1,14 +1,5 @@
 package uz.javlon.webapp.client.ui.users.search;
 
-import java.util.Set;
-
-import javax.validation.ConstraintViolation;
-
-import uz.javlon.webapp.client.application.base.view.AbstractProxySearchView;
-import uz.javlon.webapp.client.application.utils.tables.CustomColumn;
-import uz.javlon.webapp.client.proxies.UserProxy;
-import uz.javlon.webapp.client.proxies.UsersSearchCriteriaProxy;
-
 import com.github.gwtbootstrap.client.ui.Button;
 import com.github.gwtbootstrap.client.ui.TextBox;
 import com.google.gwt.cell.client.Cell.Context;
@@ -28,6 +19,10 @@ import com.google.gwt.user.cellview.client.HasKeyboardSelectionPolicy.KeyboardSe
 import com.google.gwt.user.client.ui.Anchor;
 import com.google.gwt.user.client.ui.CheckBox;
 import com.google.gwt.user.client.ui.Widget;
+import uz.javlon.webapp.client.application.base.view.AbstractProxySearchView;
+import uz.javlon.webapp.client.application.utils.tables.CustomColumn;
+import uz.javlon.webapp.client.proxies.UserProxy;
+import uz.javlon.webapp.client.proxies.UsersSearchCriteriaProxy;
 
 public class UsersSearchViewImpl extends AbstractProxySearchView<UserProxy, UsersSearchCriteriaProxy> implements UsersSearchView, Editor<UsersSearchCriteriaProxy> {
 

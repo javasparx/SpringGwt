@@ -2,13 +2,13 @@ package uz.javlon.model;
 
 import org.apache.commons.lang.builder.ToStringBuilder;
 import org.apache.commons.lang.builder.ToStringStyle;
+import org.hibernate.search.annotations.Analyze;
+import org.hibernate.search.annotations.Field;
+import org.hibernate.search.annotations.Indexed;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 import java.io.Serializable;
-import org.hibernate.search.annotations.Analyze;
-import org.hibernate.search.annotations.Field;
-import org.hibernate.search.annotations.Indexed;
 
 /**
  * This class is used to represent an address with address,

@@ -3,12 +3,12 @@
  */
 package uz.javlon.webapp.server;
 
-import java.util.Locale;
-
-import uz.javlon.webapp.client.application.ApplicationResources;
 import org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator;
 import org.hibernate.validator.resourceloading.PlatformResourceBundleLocator;
 import org.springframework.context.i18n.LocaleContextHolder;
+import uz.javlon.webapp.client.application.ApplicationResources;
+
+import java.util.Locale;
 
 /**
  * @author ivangsa
@@ -18,9 +18,7 @@ public class CustomValidationMessageInterpolator extends ResourceBundleMessageIn
 
 	private static final String APPLICATION_RESOURCES_NAME = ApplicationResources.class.getName();
 	/**
-	 * @param userResourceBundleLocator
-	 * @param cacheMessages
-	 */
+     */
 	public CustomValidationMessageInterpolator() {
 		super(new PlatformResourceBundleLocator(APPLICATION_RESOURCES_NAME));
 	}

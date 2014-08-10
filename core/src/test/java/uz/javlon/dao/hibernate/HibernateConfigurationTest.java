@@ -1,12 +1,12 @@
 package uz.javlon.dao.hibernate;
 
-import uz.javlon.dao.BaseDaoTestCase;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.persister.entity.EntityPersister;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import uz.javlon.dao.BaseDaoTestCase;
 
 import java.util.Map;
 

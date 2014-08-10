@@ -3,11 +3,10 @@
  */
 package uz.javlon.webapp.client.ui.users.updatePassword;
 
-import uz.javlon.webapp.client.ui.users.updatePassword.UpdatePasswordView.UserCredentials;
-
 import com.google.gwt.place.shared.Place;
 import com.google.gwt.place.shared.PlaceTokenizer;
 import com.google.gwt.place.shared.Prefix;
+import uz.javlon.webapp.client.ui.users.updatePassword.UpdatePasswordView.UserCredentials;
 
 /**
  * @author ivangsa

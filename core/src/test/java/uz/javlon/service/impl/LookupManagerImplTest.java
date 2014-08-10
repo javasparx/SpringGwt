@@ -1,12 +1,12 @@
 package uz.javlon.service.impl;
 
+import org.junit.Test;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
 import uz.javlon.Constants;
 import uz.javlon.dao.LookupDao;
 import uz.javlon.model.LabelValue;
 import uz.javlon.model.Role;
-import org.junit.Test;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
 
 import java.util.ArrayList;
 import java.util.List;

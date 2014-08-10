@@ -1,17 +1,5 @@
 package uz.javlon.webapp.client.application.base.activity;
 
-import java.util.Set;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
-import javax.validation.ConstraintViolation;
-
-import uz.javlon.webapp.client.application.Application;
-import uz.javlon.webapp.client.application.base.place.EntityProxyPlace;
-import uz.javlon.webapp.client.application.base.place.EntitySearchPlace;
-import uz.javlon.webapp.client.application.base.view.ProxyEditView;
-import uz.javlon.webapp.client.ui.home.HomePlace;
-
 import com.github.gwtbootstrap.client.ui.constants.AlertType;
 import com.google.gwt.activity.shared.Activity;
 import com.google.gwt.event.shared.EventBus;
@@ -19,12 +7,17 @@ import com.google.gwt.place.shared.Place;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.AcceptsOneWidget;
 import com.google.web.bindery.requestfactory.gwt.client.RequestFactoryEditorDriver;
-import com.google.web.bindery.requestfactory.shared.EntityProxy;
-import com.google.web.bindery.requestfactory.shared.EntityProxyId;
-import com.google.web.bindery.requestfactory.shared.Receiver;
-import com.google.web.bindery.requestfactory.shared.Request;
-import com.google.web.bindery.requestfactory.shared.RequestContext;
-import com.google.web.bindery.requestfactory.shared.ServerFailure;
+import com.google.web.bindery.requestfactory.shared.*;
+import uz.javlon.webapp.client.application.Application;
+import uz.javlon.webapp.client.application.base.place.EntityProxyPlace;
+import uz.javlon.webapp.client.application.base.place.EntitySearchPlace;
+import uz.javlon.webapp.client.application.base.view.ProxyEditView;
+import uz.javlon.webapp.client.ui.home.HomePlace;
+
+import javax.validation.ConstraintViolation;
+import java.util.Set;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Abstract activity for editing a record. Subclasses must provide access to the

@@ -1,13 +1,5 @@
 package uz.javlon.webapp.client.application.base.view;
 
-import java.util.HashSet;
-import java.util.Set;
-
-import javax.validation.ConstraintViolation;
-
-import uz.javlon.webapp.client.application.ApplicationResources;
-
-import com.github.gwtbootstrap.client.ui.DataGrid;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.editor.client.SimpleBeanEditorDriver;
 import com.google.gwt.uibinder.client.UiField;
@@ -16,8 +8,12 @@ import com.google.gwt.user.cellview.client.ColumnSortEvent.Handler;
 import com.google.gwt.user.cellview.client.ColumnSortList;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.view.client.HasData;
-import com.google.web.bindery.requestfactory.shared.BaseProxy;
 import com.google.web.bindery.requestfactory.shared.EntityProxy;
+import uz.javlon.webapp.client.application.ApplicationResources;
+
+import javax.validation.ConstraintViolation;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Abstract implementation of ProxyListView.

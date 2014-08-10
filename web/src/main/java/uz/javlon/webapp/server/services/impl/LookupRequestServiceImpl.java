@@ -3,21 +3,16 @@
  */
 package uz.javlon.webapp.server.services.impl;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Locale;
-
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.i18n.LocaleContextHolder;
+import org.springframework.security.access.annotation.Secured;
+import org.springframework.stereotype.Component;
 import uz.javlon.model.LabelValue;
 import uz.javlon.service.RoleManager;
 import uz.javlon.webapp.listener.StartupListener;
 import uz.javlon.webapp.server.services.LookupRequestService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.i18n.LocaleContextHolder;
-import org.springframework.security.access.annotation.Secured;
-import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.stereotype.Component;
+
+import java.util.*;
 
 /**
  * @author ivangsa
