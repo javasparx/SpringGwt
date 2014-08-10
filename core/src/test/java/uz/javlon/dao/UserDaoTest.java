@@ -1,12 +1,13 @@
 package uz.javlon.dao;
 
-import org.junit.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.dao.DataAccessException;
 import uz.javlon.Constants;
 import uz.javlon.model.Address;
 import uz.javlon.model.Role;
 import uz.javlon.model.User;
+import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataAccessException;
+import org.springframework.dao.DataIntegrityViolationException;
 
 import java.util.List;
 
@@ -41,8 +42,7 @@ public class UserDaoTest extends BaseDaoTestCase {
         log.debug("password: " + password);
     }
 
-    //TODO - fix me
-//    @Test(expected=DataIntegrityViolationException.class)
+    @Test(expected=DataIntegrityViolationException.class)
     public void testUpdateUser() throws Exception {
         User user = dao.get(-1L);
 
@@ -65,7 +65,7 @@ public class UserDaoTest extends BaseDaoTestCase {
         user2.setLastName(user.getLastName());
         user2.setPassword(user.getPassword());
         user2.setPasswordHint(user.getPasswordHint());
-        user2.setRoles(user.getRoles());
+//        user2.setRoles(user.getRoles());
         user2.setUsername(user.getUsername());
         user2.setWebsite(user.getWebsite());
 
@@ -147,7 +147,7 @@ public class UserDaoTest extends BaseDaoTestCase {
         assertFalse(b);
     }
 
-//    @Test
+    @Test
     public void testUserSearch() throws Exception {
         // reindex all the data
         dao.reindex();
