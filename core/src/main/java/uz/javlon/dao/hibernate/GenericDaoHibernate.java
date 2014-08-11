@@ -31,11 +31,11 @@ import java.util.*;
  *      &lt;/bean&gt;
  * </pre>
  *
- * @author <a href="mailto:bwnoll@gmail.com">Bryan Noll</a>
- *      Updated by jgarcia: update hibernate3 to hibernate4
- * @author jgarcia (update: added full text search + reindexing)
- * @param <T> a type variable
+ * @param <T>  a type variable
  * @param <PK> the primary key for that type
+ * @author <a href="mailto:bwnoll@gmail.com">Bryan Noll</a>
+ *         Updated by jgarcia: update hibernate3 to hibernate4
+ * @author jgarcia (update: added full text search + reindexing)
  */
 public class GenericDaoHibernate<T, PK extends Serializable> implements GenericDao<T, PK> {
     /**

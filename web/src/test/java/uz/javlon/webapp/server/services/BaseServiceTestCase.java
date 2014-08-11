@@ -32,12 +32,15 @@ public abstract class BaseServiceTestCase {
     protected final Log log = LogFactory.getLog(getClass());
 
     private int smtpPort = 25250;
-    @Autowired private UserManager userManager;
-    @Autowired private JavaMailSenderImpl mailSender;
+    @Autowired
+    private UserManager userManager;
+    @Autowired
+    private JavaMailSenderImpl mailSender;
 
     private Wiser wiser;
 
-    @Before public void onSetUp() {
+    @Before
+    public void onSetUp() {
         smtpPort = smtpPort + (int) (Math.random() * 100);
         // change the port on the mailSender so it doesn't conflict with an
         // existing SMTP server on localhost

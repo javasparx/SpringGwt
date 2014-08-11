@@ -20,18 +20,23 @@ import uz.javlon.webapp.client.proxies.UserProxy;
 import java.util.HashSet;
 import java.util.Set;
 
-public class ActiveUsersViewImpl extends Composite implements ActiveUsersView{
+public class ActiveUsersViewImpl extends Composite implements ActiveUsersView {
 
-    interface Binder extends UiBinder<Widget, ActiveUsersViewImpl> { }
+    interface Binder extends UiBinder<Widget, ActiveUsersViewImpl> {
+    }
+
     private static final Binder uiBinder = GWT.create(Binder.class);
 
     private Delegate delegate;
-    
-	@UiField(provided=true) ApplicationResources i18n = GWT.create(ApplicationResources.class);
-  
-    @UiField Button doneButton;
 
-    @UiField CellTable<UserProxy> table;
+    @UiField(provided = true)
+    ApplicationResources i18n = GWT.create(ApplicationResources.class);
+
+    @UiField
+    Button doneButton;
+
+    @UiField
+    CellTable<UserProxy> table;
     Set<String> paths = new HashSet<String>();
 
     public ActiveUsersViewImpl() {
@@ -42,58 +47,61 @@ public class ActiveUsersViewImpl extends Composite implements ActiveUsersView{
 
     @Override
     public void setDelegate(final Delegate delegate) {
-    	this.delegate = delegate;
+        this.delegate = delegate;
     }
-    
+
     @Override
     public CellTable<UserProxy> getCellTable() {
-    	return table;
+        return table;
     }
-    
+
     @Override
     public String[] getPaths() {
-    	return paths.toArray(new String[paths.size()]);
+        return paths.toArray(new String[paths.size()]);
     }
 
 
     @UiHandler("doneButton")
     public void doneClicked(final ClickEvent event) {
-    	delegate.cancelClicked();
+        delegate.cancelClicked();
     }
 
-    
+
     public void createTableColumns() {
 
-		int columnNumber = 0;
+        int columnNumber = 0;
         paths.add("username");
         table.addColumn(new CustomColumn<UserProxy, String>("username", true) {
-			@Override
-			public String getValue(final UserProxy user) {
-				return user.getUsername();
-			}
-		}, i18n.user_username());
+            @Override
+            public String getValue(final UserProxy user) {
+                return user.getUsername();
+            }
+        }, i18n.user_username());
         table.setColumnWidth(columnNumber++, "30%");
-        
+
         paths.add("email");
         paths.add("firstName");
         paths.add("lastName");
         table.addColumn(new CustomColumn<UserProxy, String>("firstName", true) {
 
-			@Override
-			public String getValue(final UserProxy user) {
-				return user.getFirstName() + " " + user.getLastName();
-			}
-			@Override
-			public void render(final Context context, final UserProxy object, final SafeHtmlBuilder sb) {
-				final String template = 
-						SafeHtmlUtils.htmlEscape(getValue(object)) + " " +
-						"<a href=\"mailto:" + SafeHtmlUtils.htmlEscape(object.getEmail()) + "\">\n" + 
-						"	<img class=\"icon\" alt=\"E-Mail\" src=\"images/iconEmail.gif\">\n" + 
-						"</a>";
-				sb.append(SafeHtmlUtils.fromTrustedString(template));
-			};			
-		}, i18n.activeUsers_fullName());           
-        
+            @Override
+            public String getValue(final UserProxy user) {
+                return user.getFirstName() + " " + user.getLastName();
+            }
+
+            @Override
+            public void render(final Context context, final UserProxy object, final SafeHtmlBuilder sb) {
+                final String template =
+                        SafeHtmlUtils.htmlEscape(getValue(object)) + " " +
+                                "<a href=\"mailto:" + SafeHtmlUtils.htmlEscape(object.getEmail()) + "\">\n" +
+                                "	<img class=\"icon\" alt=\"E-Mail\" src=\"images/iconEmail.gif\">\n" +
+                                "</a>";
+                sb.append(SafeHtmlUtils.fromTrustedString(template));
+            }
+
+            ;
+        }, i18n.activeUsers_fullName());
+
     }
 
 }

@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package uz.javlon.webapp.server.services.impl;
 
@@ -30,13 +30,13 @@ import java.util.Map;
 
 /**
  * @author ivangsa
- *
  */
 public abstract class AbstractBaseRequest implements ServletContextAware, CxfMessageContextAware {
 
     protected final transient Log log = LogFactory.getLog(getClass());
 
-    @Autowired @Qualifier("messageSource")
+    @Autowired
+    @Qualifier("messageSource")
     protected MessageSource messages;
     @Autowired
     protected MailEngine mailEngine;
@@ -51,11 +51,13 @@ public abstract class AbstractBaseRequest implements ServletContextAware, CxfMes
      */
     public MessageContext messageContext;
 
-    @Override public void setServletContext(final ServletContext servletContext) {
+    @Override
+    public void setServletContext(final ServletContext servletContext) {
         this.servletContext = servletContext;
     }
 
-    @Override @Context
+    @Override
+    @Context
     public void setMessageContext(final MessageContext messageContext) {
         this.messageContext = messageContext;
     }
@@ -83,7 +85,7 @@ public abstract class AbstractBaseRequest implements ServletContextAware, CxfMes
      * @return
      */
     public String getText(final String msgKey, final String arg, final Locale locale) {
-        return getText(msgKey, new Object[] { arg }, locale);
+        return getText(msgKey, new Object[]{arg}, locale);
     }
 
     /**
@@ -101,9 +103,10 @@ public abstract class AbstractBaseRequest implements ServletContextAware, CxfMes
 
     /**
      * Convenience message to send messages to users, includes app URL as footer.
+     *
      * @param user the user to send a message to.
-     * @param msg the message to send.
-     * @param url the URL of the application.
+     * @param msg  the message to send.
+     * @param url  the URL of the application.
      */
     protected void sendUserMessage(final User user, final String templateName, final String msg, final String url) {
         if (log.isDebugEnabled()) {
@@ -126,7 +129,7 @@ public abstract class AbstractBaseRequest implements ServletContextAware, CxfMes
 
     protected String getCurrentUsername() {
         final Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        if(authentication != null && !isAnonymousLogin()) {
+        if (authentication != null && !isAnonymousLogin()) {
             return authentication.getName();
         }
         return null;
@@ -148,24 +151,22 @@ public abstract class AbstractBaseRequest implements ServletContextAware, CxfMes
 
 
     /**
-     * 
      * @return
      */
     protected HttpServletRequest getServletRequest() {
         final HttpServletRequest request = RequestFactoryServlet.getThreadLocalRequest();
-        if(request == null) { // jax-rs
+        if (request == null) { // jax-rs
             return messageContext.getHttpServletRequest();
         }
         return request;
     }
 
     /**
-     * 
      * @return
      */
     protected HttpServletResponse getServletResponse() {
         final HttpServletResponse response = RequestFactoryServlet.getThreadLocalResponse();
-        if(response == null) { // jax-rs
+        if (response == null) { // jax-rs
             return messageContext.getHttpServletResponse();
         }
         return response;

@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package uz.javlon.webapp.client.ui.login;
 
@@ -27,7 +27,6 @@ import uz.javlon.webapp.client.ui.users.signUp.SignUpPlace;
 
 /**
  * @author ivangsa
- *
  */
 public class LoginViewImpl extends Composite implements LoginView, Editor<LoginView.LoginDetails> {
 
@@ -69,7 +68,7 @@ public class LoginViewImpl extends Composite implements LoginView, Editor<LoginV
     Element requestRecoveryTokenElement;
 
     /**
-     * 
+     *
      */
     public LoginViewImpl() {
         super();
@@ -140,7 +139,7 @@ public class LoginViewImpl extends Composite implements LoginView, Editor<LoginV
         delegate.onLoginClick();
     }
 
-    @UiHandler({ "username", "password" })
+    @UiHandler({"username", "password"})
     void defaultAction(final KeyDownEvent event) {
         if (event.getNativeKeyCode() == KeyCodes.KEY_ENTER) {
             delegate.onLoginClick();

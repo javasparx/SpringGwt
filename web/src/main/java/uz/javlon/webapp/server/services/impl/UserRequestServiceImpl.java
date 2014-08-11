@@ -41,15 +41,14 @@ public class UserRequestServiceImpl extends AbstractBaseRequest implements UserR
     private RoleManager roleManager;
 
     /**
-     * 
      * @return
      */
     @Override
     public User getCurrentUser() {
         final String username = getCurrentUsername();
-        if(username != null) {
+        if (username != null) {
             final User user = userManager.getUserByUsername(username);
-            if(isFullyAuthenticated()) {
+            if (isFullyAuthenticated()) {
                 user.getRoles().add(new Role(RoleProxy.FULLY_AUTHENTICATED));
             }
             return user;
@@ -58,7 +57,6 @@ public class UserRequestServiceImpl extends AbstractBaseRequest implements UserR
     }
 
     /**
-     * 
      * @return
      */
     @Override
@@ -67,7 +65,6 @@ public class UserRequestServiceImpl extends AbstractBaseRequest implements UserR
     }
 
     /**
-     * 
      * @param user
      * @return
      * @throws Exception
@@ -116,7 +113,6 @@ public class UserRequestServiceImpl extends AbstractBaseRequest implements UserR
 
 
     /**
-     * 
      * @return
      */
     @Override
@@ -128,7 +124,6 @@ public class UserRequestServiceImpl extends AbstractBaseRequest implements UserR
     }
 
     /**
-     * 
      * @param user
      * @return
      * @throws Exception
@@ -136,14 +131,13 @@ public class UserRequestServiceImpl extends AbstractBaseRequest implements UserR
     @Override
     public User editProfile(final User user) throws Exception {
         final String username = getCurrentUsername();
-        if(!username.equals(user.getUsername())) {
+        if (!username.equals(user.getUsername())) {
             throw new AccessDeniedException("Trying to edit another users profile");
         }
         return userManager.saveUser(user);
     }
 
     /**
-     * 
      * @param userId
      * @return
      */
@@ -155,7 +149,6 @@ public class UserRequestServiceImpl extends AbstractBaseRequest implements UserR
     }
 
     /**
-     * 
      * @param user
      * @return
      * @throws Exception
@@ -170,40 +163,37 @@ public class UserRequestServiceImpl extends AbstractBaseRequest implements UserR
     }
 
     /**
-     * 
      * @param searchCriteria
      * @return
      */
     @Override
     public long countUsers(final UsersSearchCriteria searchCriteria) {
-        final String searchTerm = searchCriteria != null? searchCriteria.getSearchTerm() : null;
+        final String searchTerm = searchCriteria != null ? searchCriteria.getSearchTerm() : null;
         return userManager.search(searchTerm).size();
     }
 
     /**
-     * 
      * @param searchCriteria
      * @param firstResult
      * @param maxResults
      * @return
      */
     @Override
-    public List<User> searchUsers(final UsersSearchCriteria searchCriteria, final int firstResult, final int maxResults){
+    public List<User> searchUsers(final UsersSearchCriteria searchCriteria, final int firstResult, final int maxResults) {
         return searchUsers(searchCriteria, firstResult, maxResults, null, true);
     }
 
     /**
-     * 
      * @param searchCriteria
      * @param firstResult
      * @param maxResults
      * @return
      */
     @Override
-    public List<User> searchUsers(final UsersSearchCriteria searchCriteria, final int firstResult, final int maxResults, final String sortProperty, final boolean ascending){
-        final String searchTerm = searchCriteria != null? searchCriteria.getSearchTerm() : null;
+    public List<User> searchUsers(final UsersSearchCriteria searchCriteria, final int firstResult, final int maxResults, final String sortProperty, final boolean ascending) {
+        final String searchTerm = searchCriteria != null ? searchCriteria.getSearchTerm() : null;
         final List<User> users = userManager.search(searchTerm);
-        if(StringUtils.isNotEmpty(sortProperty)) {
+        if (StringUtils.isNotEmpty(sortProperty)) {
             log.debug(String.format("Sorting usersList by property='%s', ascending='%s'", sortProperty, ascending));
             Collections.sort(users, new PropertyComparator(sortProperty, true, ascending));
         }
@@ -214,7 +204,6 @@ public class UserRequestServiceImpl extends AbstractBaseRequest implements UserR
     }
 
     /**
-     * 
      * @param userId
      */
     @Override
@@ -223,7 +212,6 @@ public class UserRequestServiceImpl extends AbstractBaseRequest implements UserR
     }
 
     /**
-     * 
      * @param username
      * @return
      */
@@ -249,7 +237,7 @@ public class UserRequestServiceImpl extends AbstractBaseRequest implements UserR
 
             message.setTo(user.getEmail());
             final String subject =
-                    '[' +getText("webapp.name", locale) + "] " +
+                    '[' + getText("webapp.name", locale) + "] " +
                             getText("user.passwordHint", locale);
             message.setSubject(subject);
             message.setText(msg.toString());
@@ -264,7 +252,6 @@ public class UserRequestServiceImpl extends AbstractBaseRequest implements UserR
     }
 
     /**
-     * 
      * @param username
      * @return
      */
@@ -282,7 +269,6 @@ public class UserRequestServiceImpl extends AbstractBaseRequest implements UserR
     }
 
     /**
-     * 
      * @param username
      * @param token
      * @param currentPassword
@@ -296,7 +282,7 @@ public class UserRequestServiceImpl extends AbstractBaseRequest implements UserR
             final String token,
             final String currentPassword,
             final String password)
-                    throws UserExistsException {
+            throws UserExistsException {
 
         final HttpServletRequest request = getServletRequest();
 
@@ -323,17 +309,16 @@ public class UserRequestServiceImpl extends AbstractBaseRequest implements UserR
     }
 
     /**
-     * 
      * @return
      */
     @Override
-    public List<User> getActiveUsers(){
+    public List<User> getActiveUsers() {
         return new ArrayList((Set) getServletContext().getAttribute(UserCounterListener.USERS_KEY));
     }
 
 
     /**
-     * 
+     *
      */
     @Override
     public boolean logout() {

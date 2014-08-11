@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package uz.javlon.webapp.client.ui.reloadOptions;
 
@@ -9,12 +9,11 @@ import com.google.gwt.place.shared.Prefix;
 
 /**
  * @author ivangsa
- *
  */
 public class ReloadOptionsPlace extends Place {
 
 
-	@Prefix("reloadOptions")
+    @Prefix("reloadOptions")
     public static class Tokenizer implements PlaceTokenizer<ReloadOptionsPlace> {
         @Override
         public String getToken(ReloadOptionsPlace place) {

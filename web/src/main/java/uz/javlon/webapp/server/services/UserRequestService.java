@@ -11,7 +11,6 @@ import java.util.List;
 public interface UserRequestService {
 
     /**
-     * 
      * @return
      */
     @GET
@@ -19,7 +18,6 @@ public interface UserRequestService {
     User getCurrentUser();
 
     /**
-     * 
      * @return
      */
     @GET
@@ -27,7 +25,6 @@ public interface UserRequestService {
     User signUp();
 
     /**
-     * 
      * @param user
      * @return
      * @throws Exception
@@ -37,7 +34,6 @@ public interface UserRequestService {
     User signUp(User user) throws Exception;
 
     /**
-     * 
      * @return
      */
     @GET
@@ -46,7 +42,6 @@ public interface UserRequestService {
     User editProfile();
 
     /**
-     * 
      * @param user
      * @return
      * @throws Exception
@@ -57,7 +52,6 @@ public interface UserRequestService {
     User editProfile(User user) throws Exception;
 
     /**
-     * 
      * @param userId
      * @return
      */
@@ -67,7 +61,6 @@ public interface UserRequestService {
     User getUser(@PathParam("id") Long userId);
 
     /**
-     * 
      * @param user
      * @return
      * @throws Exception
@@ -78,7 +71,6 @@ public interface UserRequestService {
     User saveUser(User user) throws Exception;
 
     /**
-     * 
      * @param searchCriteria
      * @return
      */
@@ -88,7 +80,6 @@ public interface UserRequestService {
     long countUsers(UsersSearchCriteria searchCriteria);
 
     /**
-     * 
      * @param searchCriteria
      * @param firstResult
      * @param maxResults
@@ -100,7 +91,6 @@ public interface UserRequestService {
     List<User> searchUsers(UsersSearchCriteria searchCriteria, int firstResult, int maxResults);
 
     /**
-     * 
      * @param searchCriteria
      * @param firstResult
      * @param maxResults
@@ -114,16 +104,14 @@ public interface UserRequestService {
     List<User> searchUsers(UsersSearchCriteria searchCriteria, int firstResult, int maxResults, String sortProperty, boolean ascending);
 
     /**
-     * 
      * @param userId
      */
     @DELETE
     @Path("removeUser/{id}")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
-    void removeUser(@PathParam("id")Long userId);
+    void removeUser(@PathParam("id") Long userId);
 
     /**
-     * 
      * @param username
      * @return
      */
@@ -132,7 +120,6 @@ public interface UserRequestService {
     String sendPasswordHint(String username);
 
     /**
-     * 
      * @param username
      * @return
      */
@@ -145,7 +132,6 @@ public interface UserRequestService {
     User updatePassword(@PathParam("username") String username, String token, String currentPassword, String password) throws UserExistsException;
 
     /**
-     * 
      * @return
      */
     @GET
@@ -156,7 +142,6 @@ public interface UserRequestService {
     @GET
     @Path("/logout")
     boolean logout();
-
 
 
 }

@@ -15,6 +15,7 @@ public interface LookupDao {
 
     /**
      * Returns all Roles ordered by name
+     *
      * @return populated list of roles
      */
     List<Role> getRoles();

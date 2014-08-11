@@ -51,7 +51,7 @@ public class Address extends BaseObject implements Serializable {
     }
 
     @Column(name = "postal_code", length = 15)
-    @Field(analyze= Analyze.NO)
+    @Field(analyze = Analyze.NO)
     public String getPostalCode() {
         return postalCode;
     }

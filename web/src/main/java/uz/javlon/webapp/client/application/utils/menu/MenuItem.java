@@ -9,7 +9,7 @@ import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 
-public class MenuItem implements Iterable<MenuItem>{
+public class MenuItem implements Iterable<MenuItem> {
 
     private final String title;
     private final Place place;
@@ -31,7 +31,7 @@ public class MenuItem implements Iterable<MenuItem>{
         this.title = title;
         this.place = place;
         this.roles.addAll(Arrays.asList(roles));
-        if(this.roles.isEmpty()) {
+        if (this.roles.isEmpty()) {
             this.roles.add(RoleProxy.ANONYMOUS);
         }
     }

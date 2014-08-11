@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package uz.javlon.webapp.client.ui.users.search;
 
@@ -9,7 +9,6 @@ import uz.javlon.webapp.client.proxies.UsersSearchCriteriaProxy;
 
 /**
  * @author ivangsa
- *
  */
 public interface UsersSearchView extends ProxySearchView<UserProxy, UsersSearchCriteriaProxy> {
 

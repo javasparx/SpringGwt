@@ -13,20 +13,20 @@ import uz.javlon.model.User;
 import java.util.List;
 
 /**
- *	
- *	@author ivangsa
- *
+ * @author ivangsa
  */
 public abstract class UserRequestServiceTest extends BaseServiceTestCase {
 
-    @Autowired private UserRequestService userRequestService;
+    @Autowired
+    private UserRequestService userRequestService;
 
     @After
     public void tearDown() throws Exception {
         logout();
     }
 
-    @Test public void testGetCurrentUser() {
+    @Test
+    public void testGetCurrentUser() {
         User user = userRequestService.getCurrentUser();
         Assert.assertNull(user);
         login("admin");
@@ -37,7 +37,8 @@ public abstract class UserRequestServiceTest extends BaseServiceTestCase {
         Assert.assertNull(user);
     }
 
-    @Test public void testSignUp() throws Exception {
+    @Test
+    public void testSignUp() throws Exception {
         User user = userRequestService.signUp();
         Assert.assertTrue(user.getId() == null);
 
@@ -54,7 +55,8 @@ public abstract class UserRequestServiceTest extends BaseServiceTestCase {
         Assert.assertTrue(getReceivedMailMessages(true).size() == 1);
     }
 
-    @Test public void testEditProfile() throws Exception {
+    @Test
+    public void testEditProfile() throws Exception {
         login("admin");
         User user = userRequestService.editProfile();
         final int version = user.getVersion();
@@ -63,7 +65,8 @@ public abstract class UserRequestServiceTest extends BaseServiceTestCase {
         Assert.assertEquals(version + 1, (int) user.getVersion());
     }
 
-    @Test public void testGetUser() {
+    @Test
+    public void testGetUser() {
         try {
             userRequestService.getUser(-2L);
             Assert.fail("Expected AuthenticationException");
@@ -82,7 +85,8 @@ public abstract class UserRequestServiceTest extends BaseServiceTestCase {
         Assert.assertNotNull(user);
     }
 
-    @Test public void testSaveUser() throws Exception {
+    @Test
+    public void testSaveUser() throws Exception {
         login("admin");
         User user = userRequestService.getUser(-2L);
         final int version = user.getVersion();
@@ -91,14 +95,16 @@ public abstract class UserRequestServiceTest extends BaseServiceTestCase {
         Assert.assertEquals(version + 1, (int) user.getVersion());
     }
 
-    @Test public void testCountUsers() {
+    @Test
+    public void testCountUsers() {
         login("admin");
         final UsersSearchCriteria searchCriteria = new UsersSearchCriteria();
         final long count = userRequestService.countUsers(searchCriteria);
         Assert.assertTrue(count > 0);
     }
 
-    @Test public void testSearchUsers() {
+    @Test
+    public void testSearchUsers() {
         login("admin");
         final UsersSearchCriteria searchCriteria = new UsersSearchCriteria();
         final long count = userRequestService.countUsers(searchCriteria);
@@ -108,13 +114,15 @@ public abstract class UserRequestServiceTest extends BaseServiceTestCase {
         Assert.assertEquals(count, results.size());
     }
 
-    @Test public void testSendPasswordHint() {
+    @Test
+    public void testSendPasswordHint() {
         startSmtpServer();
         userRequestService.sendPasswordHint("admin");
         Assert.assertEquals(1, getReceivedMailMessages(true).size());
     }
 
-    @Test public void testRequestRecoveryToken() {
+    @Test
+    public void testRequestRecoveryToken() {
         startSmtpServer();
         userRequestService.requestRecoveryToken("admin");
         final List<WiserMessage> messages = getReceivedMailMessages(true);
@@ -122,7 +130,8 @@ public abstract class UserRequestServiceTest extends BaseServiceTestCase {
         log.debug(ToStringBuilder.reflectionToString(messages.get(0)));
     }
 
-    @Test public void testUpdatePassword() {
+    @Test
+    public void testUpdatePassword() {
 
     }
 

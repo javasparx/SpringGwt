@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package uz.javlon.webapp.server;
 
@@ -12,25 +12,25 @@ import java.util.Locale;
 
 /**
  * @author ivangsa
- *
  */
 public class CustomValidationMessageInterpolator extends ResourceBundleMessageInterpolator {
 
-	private static final String APPLICATION_RESOURCES_NAME = ApplicationResources.class.getName();
-	/**
+    private static final String APPLICATION_RESOURCES_NAME = ApplicationResources.class.getName();
+
+    /**
      */
-	public CustomValidationMessageInterpolator() {
-		super(new PlatformResourceBundleLocator(APPLICATION_RESOURCES_NAME));
-	}
-	
-	@Override
-	public String interpolate(String message, Context context) {
-		return interpolate(message, context, LocaleContextHolder.getLocale());
-	}
-	
-	@Override
-	public String interpolate(String message, Context context, Locale locale) {
-		return super.interpolate(message, context, locale);
-	}
-	
+    public CustomValidationMessageInterpolator() {
+        super(new PlatformResourceBundleLocator(APPLICATION_RESOURCES_NAME));
+    }
+
+    @Override
+    public String interpolate(String message, Context context) {
+        return interpolate(message, context, LocaleContextHolder.getLocale());
+    }
+
+    @Override
+    public String interpolate(String message, Context context, Locale locale) {
+        return super.interpolate(message, context, locale);
+    }
+
 }

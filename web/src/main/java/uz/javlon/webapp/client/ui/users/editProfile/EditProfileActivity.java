@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package uz.javlon.webapp.client.ui.users.editProfile;
 
@@ -21,7 +21,6 @@ import uz.javlon.webapp.client.ui.users.updatePassword.UpdatePasswordPlace;
 
 /**
  * @author ivangsa
- *
  */
 public class EditProfileActivity extends AbstractProxyEditActivity<UserProxy> implements EditUserView.Delegate {
 
@@ -100,7 +99,8 @@ public class EditProfileActivity extends AbstractProxyEditActivity<UserProxy> im
         return new EditProfilePlace();
     }
 
-    @Override public void updatePasswordClicked() {
+    @Override
+    public void updatePasswordClicked() {
         placeController.goTo(new UpdatePasswordPlace(entityProxy.getUsername()));
     }
 

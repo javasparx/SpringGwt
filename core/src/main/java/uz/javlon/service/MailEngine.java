@@ -19,7 +19,7 @@ import java.util.Map;
 /**
  * Class for sending e-mail messages based on Velocity templates
  * or with attachments.
- * 
+ *
  * @author Matt Raible
  */
 public class MailEngine {
@@ -46,17 +46,18 @@ public class MailEngine {
 
     /**
      * Send a simple message based on a Velocity template.
-     * @param msg the message to populate
+     *
+     * @param msg          the message to populate
      * @param templateName the Velocity template to use (relative to classpath)
-     * @param model a map containing key/value pairs
+     * @param model        a map containing key/value pairs
      */
     public void sendMessage(SimpleMailMessage msg, String templateName, Map model) {
         String result = null;
 
         try {
             result =
-                VelocityEngineUtils.mergeTemplateIntoString(velocityEngine,
-                                                            templateName, "UTF-8", model);
+                    VelocityEngineUtils.mergeTemplateIntoString(velocityEngine,
+                            templateName, "UTF-8", model);
         } catch (VelocityException e) {
             e.printStackTrace();
             log.error(e.getMessage());
@@ -68,6 +69,7 @@ public class MailEngine {
 
     /**
      * Send a simple message with pre-populated values.
+     *
      * @param msg the message to send
      * @throws org.springframework.mail.MailException when SMTP server is down
      */
@@ -82,19 +84,19 @@ public class MailEngine {
 
     /**
      * Convenience method for sending messages with attachments.
-     * 
-     * @param recipients array of e-mail addresses
-     * @param sender e-mail address of sender
-     * @param resource attachment from classpath
-     * @param bodyText text in e-mail
-     * @param subject subject of e-mail
+     *
+     * @param recipients     array of e-mail addresses
+     * @param sender         e-mail address of sender
+     * @param resource       attachment from classpath
+     * @param bodyText       text in e-mail
+     * @param subject        subject of e-mail
      * @param attachmentName name for attachment
      * @throws MessagingException thrown when can't communicate with SMTP server
      */
-    public void sendMessage(String[] recipients, String sender, 
+    public void sendMessage(String[] recipients, String sender,
                             ClassPathResource resource, String bodyText,
                             String subject, String attachmentName)
-    throws MessagingException {
+            throws MessagingException {
         MimeMessage message = ((JavaMailSenderImpl) mailSender).createMimeMessage();
 
         // use the true flag to indicate you need a multipart message
@@ -106,7 +108,7 @@ public class MailEngine {
         if (sender == null) {
             helper.setFrom(defaultFrom);
         } else {
-           helper.setFrom(sender);
+            helper.setFrom(sender);
         }
 
         helper.setText(bodyText);

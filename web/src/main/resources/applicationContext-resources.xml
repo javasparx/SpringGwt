@@ -17,7 +17,8 @@
         </property>
         <!-- XXX it may break backwards compatibility... -->
         <property name="systemPropertiesMode">
-        	<util:constant static-field="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer.SYSTEM_PROPERTIES_MODE_OVERRIDE" />
+            <util:constant
+                    static-field="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer.SYSTEM_PROPERTIES_MODE_OVERRIDE"/>
         </property>
     </bean>
 

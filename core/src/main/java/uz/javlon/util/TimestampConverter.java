@@ -11,7 +11,7 @@ import java.util.Date;
  * This class is converts a java.util.Date to a String and a String to a
  * java.util.Date for use as a Timestamp. It is used by BeanUtils when copying
  * properties.
- * 
+ *
  * @author <a href="mailto:dan@getrolling.com">Dan Kibler</a>
  */
 public class TimestampConverter extends DateConverter {
@@ -22,7 +22,8 @@ public class TimestampConverter extends DateConverter {
 
     /**
      * Convert a String to a date
-     * @param type java.util.Date
+     *
+     * @param type  java.util.Date
      * @param value the String value
      * @return a converted date
      */
@@ -46,7 +47,8 @@ public class TimestampConverter extends DateConverter {
 
     /**
      * Convert from a java.util.Date to a String
-     * @param type java.lang.String
+     *
+     * @param type  java.lang.String
      * @param value the date instance
      * @return string version of date using default date pattern
      */

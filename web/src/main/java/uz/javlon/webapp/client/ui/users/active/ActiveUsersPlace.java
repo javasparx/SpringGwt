@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package uz.javlon.webapp.client.ui.users.active;
 
@@ -9,12 +9,11 @@ import com.google.gwt.place.shared.Prefix;
 
 /**
  * @author ivangsa
- *
  */
 public class ActiveUsersPlace extends Place {
 
 
-	@Prefix("activeUsers")
+    @Prefix("activeUsers")
     public static class Tokenizer implements PlaceTokenizer<ActiveUsersPlace> {
         @Override
         public String getToken(ActiveUsersPlace place) {

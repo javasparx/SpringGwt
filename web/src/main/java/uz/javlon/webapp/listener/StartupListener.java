@@ -86,7 +86,7 @@ public class StartupListener implements ServletContextListener {
         }
 
         setupContext(context);
-        
+
         // Determine version number for CSS and JS Assets
         String appVersion = null;
         try {

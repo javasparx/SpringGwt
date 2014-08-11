@@ -15,7 +15,7 @@ import java.util.List;
  * Hibernate implementation of LookupDao.
  *
  * @author <a href="mailto:matt@raibledesigns.com">Matt Raible</a>
- *      Modified by jgarcia: updated to hibernate 4
+ *         Modified by jgarcia: updated to hibernate 4
  */
 @Repository
 public class LookupDaoHibernate implements LookupDao {
@@ -24,6 +24,7 @@ public class LookupDaoHibernate implements LookupDao {
 
     /**
      * Initialize LookupDaoHibernate with Hibernate SessionFactory.
+     *
      * @param sessionFactory
      */
     @Autowired

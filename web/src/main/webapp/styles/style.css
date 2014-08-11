@@ -26,7 +26,7 @@ body#login {
 
 /* added to fix non clickable dropdown nested menus on mobile browsers APF-1384 */
 .navbar .dropdown-backdrop {
-	position: static;
+    position: static;
 }
 
 #switchLocale {

@@ -3,8 +3,8 @@
              xmlns:g="urn:import:com.google.gwt.user.client.ui"
         >
 
-	<g:HTMLPanel>
-		<ul ui:field="sideBar" class="nav nav-pills nav-stacked">
-		</ul>
-	</g:HTMLPanel>
+    <g:HTMLPanel>
+        <ul ui:field="sideBar" class="nav nav-pills nav-stacked">
+        </ul>
+    </g:HTMLPanel>
 </ui:UiBinder>

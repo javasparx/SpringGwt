@@ -10,7 +10,6 @@ import uz.javlon.webapp.client.ui.users.updatePassword.UpdatePasswordView.UserCr
 
 /**
  * @author ivangsa
- *
  */
 public class UpdatePasswordPlace extends Place {
 

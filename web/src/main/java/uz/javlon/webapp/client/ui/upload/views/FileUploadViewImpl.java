@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package uz.javlon.webapp.client.ui.upload.views;
 
@@ -27,66 +27,74 @@ import java.util.List;
 
 /**
  * @author ivangsa
- *
  */
 public class FileUploadViewImpl extends Composite implements FileUploadView, Editor<FileUploadBean> {
 
-	interface Binder extends UiBinder<Widget, FileUploadViewImpl> {}
-	private static final Binder BINDER = GWT.create(Binder.class);
+    interface Binder extends UiBinder<Widget, FileUploadViewImpl> {
+    }
 
-	interface Driver extends SimpleBeanEditorDriver<FileUploadBean, FileUploadViewImpl> { }	
-	private Driver driver = GWT.create(Driver.class);	
-	
-	private Delegate delegate;
-	
-	@UiField FlowPanel errorsPanel;
+    private static final Binder BINDER = GWT.create(Binder.class);
 
-	@UiField Form form;
-	@UiField TextBox name;
-	@UiField FileUpload file;
-	
-	@UiField HasClickHandlers cancelButton;
-	
-	/**
-	 * 
-	 */
-	public FileUploadViewImpl() {
-		super();
-		initWidget(BINDER.createAndBindUi(this));
-		driver.initialize(this);
-	}
-	
-	@Override
-	public void setDelegate(Delegate delegate) {
-		this.delegate = delegate;
-		form.addSubmitHandler(delegate);
-		form.addSubmitCompleteHandler(delegate);
-	}
-	
-	@Override
-	public void edit(FileUploadBean object) {
-		driver.edit(object);
-		errorsPanel.clear();
-	}
-	
-	@Override
-	public EditorDriver<FileUploadBean> getEditorDriver() {
-		return driver;
-	}
-	
-	@Override
-	public void showErrorsMessages(List<String> errors) {
-		errorsPanel.clear();
-		SafeHtmlBuilder sb = new SafeHtmlBuilder();
-		for (String error : errors) {
-			sb.appendEscaped(error);
-			sb.appendHtmlConstant("<br />");
-		}
-		errorsPanel.add(new Alert(sb.toSafeHtml().asString(), AlertType.ERROR));
-	}
-	
-	@UiHandler("cancelButton")
-	void onCancelClick(ClickEvent event) {
-		delegate.onCancelClick();
-	}
+    interface Driver extends SimpleBeanEditorDriver<FileUploadBean, FileUploadViewImpl> {
+    }
+
+    private Driver driver = GWT.create(Driver.class);
+
+    private Delegate delegate;
+
+    @UiField
+    FlowPanel errorsPanel;
+
+    @UiField
+    Form form;
+    @UiField
+    TextBox name;
+    @UiField
+    FileUpload file;
+
+    @UiField
+    HasClickHandlers cancelButton;
+
+    /**
+     *
+     */
+    public FileUploadViewImpl() {
+        super();
+        initWidget(BINDER.createAndBindUi(this));
+        driver.initialize(this);
+    }
+
+    @Override
+    public void setDelegate(Delegate delegate) {
+        this.delegate = delegate;
+        form.addSubmitHandler(delegate);
+        form.addSubmitCompleteHandler(delegate);
+    }
+
+    @Override
+    public void edit(FileUploadBean object) {
+        driver.edit(object);
+        errorsPanel.clear();
+    }
+
+    @Override
+    public EditorDriver<FileUploadBean> getEditorDriver() {
+        return driver;
+    }
+
+    @Override
+    public void showErrorsMessages(List<String> errors) {
+        errorsPanel.clear();
+        SafeHtmlBuilder sb = new SafeHtmlBuilder();
+        for (String error : errors) {
+            sb.appendEscaped(error);
+            sb.appendHtmlConstant("<br />");
+        }
+        errorsPanel.add(new Alert(sb.toSafeHtml().asString(), AlertType.ERROR));
+    }
+
+    @UiHandler("cancelButton")
+    void onCancelClick(ClickEvent event) {
+        delegate.onCancelClick();
+    }
 }

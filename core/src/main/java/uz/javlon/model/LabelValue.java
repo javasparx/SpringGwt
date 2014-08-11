@@ -8,7 +8,7 @@ import java.util.Comparator;
  * when constructing user interface elements which have a label to be displayed
  * to the user, and a corresponding value to be returned to the server. One
  * example is the <code>&lt;html:options&gt;</code> tag.
- * 
+ * <p/>
  * <p>Note: this class has a natural ordering that is inconsistent with equals.
  *
  * @see org.apache.struts.util.LabelValueBean
@@ -87,9 +87,9 @@ public class LabelValue implements Comparable, Serializable {
      * Compare LabelValueBeans based on the label, because that's the human
      * viewable part of the object.
      *
-     * @see Comparable
      * @param o LabelValue object to compare to
      * @return 0 if labels match for compared objects
+     * @see Comparable
      */
     public int compareTo(Object o) {
         // Implicitly tests for the correct type, throwing
@@ -101,6 +101,7 @@ public class LabelValue implements Comparable, Serializable {
 
     /**
      * Return a string representation of this object.
+     *
      * @return object as a string
      */
     public String toString() {
@@ -115,9 +116,9 @@ public class LabelValue implements Comparable, Serializable {
     /**
      * LabelValueBeans are equal if their values are both null or equal.
      *
-     * @see java.lang.Object#equals(java.lang.Object)
      * @param obj object to compare to
      * @return true/false based on whether values match or not
+     * @see java.lang.Object#equals(java.lang.Object)
      */
     public boolean equals(Object obj) {
         if (obj == this) {
@@ -145,8 +146,8 @@ public class LabelValue implements Comparable, Serializable {
     /**
      * The hash code is based on the object's value.
      *
-     * @see java.lang.Object#hashCode()
      * @return hashCode
+     * @see java.lang.Object#hashCode()
      */
     public int hashCode() {
         return (this.getValue() == null) ? 17 : this.getValue().hashCode();

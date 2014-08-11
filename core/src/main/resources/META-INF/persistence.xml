@@ -5,7 +5,7 @@
         <provider>org.hibernate.ejb.HibernatePersistence</provider>
         <class>uz.javlon.model.User</class>
         <class>uz.javlon.model.Role</class>
-        
+
         <!-- 
         Adding more <class>f.q.c.Name</class> elements here is not required.  
         The annotated classes will still be detected, as can be observed in the 
@@ -18,7 +18,7 @@
         classes that are mapped as persistent entities.  Do whatever blows your 
         skirt up.
         -->
-        
+
     </persistence-unit>
-    
+
 </persistence>

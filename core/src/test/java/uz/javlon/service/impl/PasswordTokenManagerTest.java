@@ -21,7 +21,7 @@ import static org.junit.Assert.assertTrue;
                 "classpath:/applicationContext-resources.xml",
                 "classpath:/applicationContext-dao.xml",
                 "classpath:/applicationContext-service.xml",
-                "classpath:/applicationContext-test.xml" })
+                "classpath:/applicationContext-test.xml"})
 public class PasswordTokenManagerTest extends AbstractTransactionalJUnit4SpringContextTests {
 
     protected transient final Log log = LogFactory.getLog(getClass());
@@ -34,7 +34,7 @@ public class PasswordTokenManagerTest extends AbstractTransactionalJUnit4SpringC
     @Autowired
     @Qualifier("userManager")
     public void setUserManager(UserManager userManager) {
-	this.userManager = userManager;
+        this.userManager = userManager;
     }
 
     @Autowired

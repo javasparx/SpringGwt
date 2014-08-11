@@ -21,7 +21,6 @@ import java.util.Set;
 
 /**
  * @author ivangsa
- *
  */
 public class UpdatePasswordActivity extends AbstractBaseActivity implements UpdatePasswordView.Delegate {
 
@@ -52,7 +51,7 @@ public class UpdatePasswordActivity extends AbstractBaseActivity implements Upda
         final EditorDriver<UserCredentials> editorDriver = view.getEditorDriver();
         final UserCredentials userCredentials = editorDriver.flush();
         final Set<ConstraintViolation<UserCredentials>> violations = getValidator().validate(userCredentials);
-        if(!violations.isEmpty()) {
+        if (!violations.isEmpty()) {
             editorDriver.setConstraintViolations((Set) violations);
             return;
         }

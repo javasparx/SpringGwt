@@ -6,7 +6,7 @@
     <appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
         <layout class="org.apache.log4j.PatternLayout">
             <param name="ConversionPattern"
-                value="%p - %C{1}.%M(%L) | %m%n"/>
+                   value="%p - %C{1}.%M(%L) | %m%n"/>
         </layout>
     </appender>
 
@@ -30,7 +30,7 @@
     <logger name="org.hibernate">
         <level value="WARN"/>
     </logger>
-  
+
     <!--logger name="org.hibernate.SQL">
         <level value="DEBUG"/>
     </logger-->
@@ -38,7 +38,7 @@
     <logger name="org.springframework">
         <level value="WARN"/>
     </logger>
-   
+
     <logger name="uz.javlon">
         <level value="DEBUG"/>
     </logger>

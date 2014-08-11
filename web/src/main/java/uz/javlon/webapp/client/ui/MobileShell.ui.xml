@@ -4,24 +4,31 @@
              xmlns:nav="urn:import:uz.javlon.webapp.client.ui.navigation"
         >
 
-	<ui:with type="uz.javlon.webapp.client.application.ApplicationResources" field="i18n" />
+    <ui:with type="uz.javlon.webapp.client.application.ApplicationResources" field="i18n"/>
 
-	<g:HTMLPanel>
-		<g:NotificationMole animationDuration="0" message="loading..." ui:field="mole"></g:NotificationMole>
-   		<nav:NavigationBar />
-		
-		
-		<div class="container-fluid">
-			<g:SimplePanel  ui:field="messages"/>
-			
-			<g:SimplePanel styleName="row-fluid" ui:field="contentsPanel" />
-		</div>
-	
-	    <div id="footer" class="container navbar-fixed-bottom">
-	        <span class="col-sm-6 text-left"><ui:text from="{i18n.webapp_version}"/> <span ui:field="currentUserInfo"></span></span>
-	        <span class="col-sm-6 text-right">
-	            &copy; <ui:text from="{i18n.copyright_year}"/> <a href="{i18n.company_url}"><ui:text from="{i18n.company_name}"/></a>
-	        </span>
-	    </div>
-	</g:HTMLPanel>
+    <g:HTMLPanel>
+        <g:NotificationMole animationDuration="0" message="loading..." ui:field="mole"></g:NotificationMole>
+        <nav:NavigationBar/>
+
+
+        <div class="container-fluid">
+            <g:SimplePanel ui:field="messages"/>
+
+            <g:SimplePanel styleName="row-fluid" ui:field="contentsPanel"/>
+        </div>
+
+        <div id="footer" class="container navbar-fixed-bottom">
+            <span class="col-sm-6 text-left">
+                <ui:text from="{i18n.webapp_version}"/>
+                <span ui:field="currentUserInfo"></span>
+            </span>
+            <span class="col-sm-6 text-right">
+                &copy;
+                <ui:text from="{i18n.copyright_year}"/>
+                <a href="{i18n.company_url}">
+                    <ui:text from="{i18n.company_name}"/>
+                </a>
+            </span>
+        </div>
+    </g:HTMLPanel>
 </ui:UiBinder>

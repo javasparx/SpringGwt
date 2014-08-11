@@ -3,20 +3,28 @@
              xmlns:g='urn:import:com.google.gwt.user.client.ui'
         >
 
-<ui:with type="uz.javlon.webapp.client.application.ApplicationResources" field="i18n" />
+    <ui:with type="uz.javlon.webapp.client.application.ApplicationResources" field="i18n"/>
 
-<g:HTMLPanel>
-	<h2><ui:text from="{i18n.home_heading}"/></h2>
-	<p><ui:text from="{i18n.home_message}"/></p>
-	
-	<ul class="glassList">
-	    <li>
-	        <a href="#editProfile:"><ui:text from="{i18n.menu_user}"/></a>
-	    </li>
-	    <li>
-	        <a href="#upload:"><ui:text from="{i18n.menu_selectFile}"/></a>
-	    </li>
-	</ul>
+    <g:HTMLPanel>
+        <h2>
+            <ui:text from="{i18n.home_heading}"/>
+        </h2>
+        <p>
+            <ui:text from="{i18n.home_message}"/>
+        </p>
 
-</g:HTMLPanel>
+        <ul class="glassList">
+            <li>
+                <a href="#editProfile:">
+                    <ui:text from="{i18n.menu_user}"/>
+                </a>
+            </li>
+            <li>
+                <a href="#upload:">
+                    <ui:text from="{i18n.menu_selectFile}"/>
+                </a>
+            </li>
+        </ul>
+
+    </g:HTMLPanel>
 </ui:UiBinder>

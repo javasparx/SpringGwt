@@ -53,12 +53,14 @@ public abstract class AbstractProxySearchActivity<P extends EntityProxy, S> exte
     private HandlerRegistration rangeChangeHandler;
 
     protected abstract RequestContext createRequestContext();
+
     protected abstract Request<Long> createCountRequest(RequestContext requestContext, S searchCriteria);
+
     protected abstract Request<List<P>> createSearchRequest(RequestContext requestContext, S searchCriteria, Range range, ColumnSortList columnSortList);
 
 
     public AbstractProxySearchActivity(final Application application, final ProxySearchView<P, S> view,
-            final Class<S> searchCriteriaType) {
+                                       final Class<S> searchCriteriaType) {
         super(application);
         this.currentPlace = (EntitySearchPlace) application.getPlaceController().getWhere();
         this.view = view;
@@ -72,12 +74,12 @@ public abstract class AbstractProxySearchActivity<P extends EntityProxy, S> exte
         setDocumentTitleAndBodyAttributtes();
 
         searchCriteria = (S) currentPlace.getSearchCriteria();
-        if(searchCriteria == null) {
+        if (searchCriteria == null) {
             searchCriteria = createSearchCriteria();
         }
         view.setSearchCriteria(searchCriteria);
 
-        if(currentPlace.getMaxResults() > 0) {
+        if (currentPlace.getMaxResults() > 0) {
             view.setPageSize(currentPlace.getMaxResults());
         }
 
@@ -91,9 +93,8 @@ public abstract class AbstractProxySearchActivity<P extends EntityProxy, S> exte
 
         // Select the current page range to load (by default or from place tokens)
         Range range = hasData.getVisibleRange();
-        if(currentPlace.getFirstResult() > 0 ||
-                (currentPlace.getMaxResults() != range.getLength() && currentPlace.getMaxResults() > 0))
-        {
+        if (currentPlace.getFirstResult() > 0 ||
+                (currentPlace.getMaxResults() != range.getLength() && currentPlace.getMaxResults() > 0)) {
             range = new Range(currentPlace.getFirstResult(), currentPlace.getMaxResults());
         }
 
@@ -101,8 +102,8 @@ public abstract class AbstractProxySearchActivity<P extends EntityProxy, S> exte
     }
 
     protected S createSearchCriteria() {
-        if(!String.class.equals(searchCriteriaType)) {
-            return  (S) proxyFactory.create((Class<BaseProxy>)searchCriteriaType);
+        if (!String.class.equals(searchCriteriaType)) {
+            return (S) proxyFactory.create((Class<BaseProxy>) searchCriteriaType);
         }
         return null;
     }
@@ -117,7 +118,7 @@ public abstract class AbstractProxySearchActivity<P extends EntityProxy, S> exte
      * Load items on start.
      */
     protected void loadItems(final S searchCriteria, final Range range) {
-        if(searchCriteria instanceof BaseProxy) {
+        if (searchCriteria instanceof BaseProxy) {
             proxyFactory.setFrozen((BaseProxy) searchCriteria, true);
         }
         final RequestContext requestContext = createRequestContext();
@@ -140,7 +141,7 @@ public abstract class AbstractProxySearchActivity<P extends EntityProxy, S> exte
     protected void onRangeChanged(final HasData<P> hasData, final Range range, final ColumnSortList columnSortList) {
         final RequestContext requestContext = createRequestContext();
         createSearchRequest(requestContext, searchCriteria, range, columnSortList)
-        .with(view.getPaths()).fire( new Receiver<List<P>>() {
+                .with(view.getPaths()).fire(new Receiver<List<P>>() {
             @Override
             public void onSuccess(final List<P> results) {
                 if (view == null) {
@@ -155,7 +156,7 @@ public abstract class AbstractProxySearchActivity<P extends EntityProxy, S> exte
 
     protected void newHistoryToken(final S searchCriteria, final int firstResult, final int maxResults) {
         final String historyToken = new EntitySearchPlace.Tokenizer(proxyFactory, requests)
-        .getFullHistoryToken(new EntitySearchPlace(currentPlace.getProxyClass(), firstResult, maxResults, searchCriteria));
+                .getFullHistoryToken(new EntitySearchPlace(currentPlace.getProxyClass(), firstResult, maxResults, searchCriteria));
         History.newItem(historyToken, false);
     }
 
@@ -172,30 +173,31 @@ public abstract class AbstractProxySearchActivity<P extends EntityProxy, S> exte
 
     @Override
     public void searchClicked() {
-        if(searchCriteria instanceof BaseProxy) {
+        if (searchCriteria instanceof BaseProxy) {
             proxyFactory.setFrozen((BaseProxy) searchCriteria, false);
         }
         searchCriteria = view.getSearchCriteria();
         final Set<ConstraintViolation<S>> violations = validate(searchCriteria);
         view.setConstraintViolations(violations);
-        if(violations == null || violations.isEmpty()) {
+        if (violations == null || violations.isEmpty()) {
             loadItems(searchCriteria);
         }
     }
 
     /**
      * Validates given searchCriteria.
-     * 
+     * <p/>
      * Override if you want to apply validation, example:
      * <code><pre>
      * protected Set<ConstraintViolation<S>> validate(S searchCriteria){
      * 	return getValidator().validate(searchCriteria);
      * }
      * </pre></code>
+     *
      * @param searchCriteria
      * @return
      */
-    protected Set<ConstraintViolation<S>> validate(final S searchCriteria){
+    protected Set<ConstraintViolation<S>> validate(final S searchCriteria) {
         return null;//
     }
 

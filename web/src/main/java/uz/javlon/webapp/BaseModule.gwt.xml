@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module rename-to="script">
-	<inherits name="com.google.gwt.activity.Activity"/>
-	<inherits name="com.google.gwt.place.Place"/>
-	<inherits name="com.google.gwt.user.User"/>
-	<inherits name="com.google.web.bindery.requestfactory.RequestFactory"/>
-	<inherits name="com.google.gwt.user.cellview.CellView"/>
-	<inherits name="com.google.gwt.logging.Logging"/>
-	<inherits name="com.google.gwt.inject.Inject"/>
-	<inherits name="com.google.gwt.text.Text"/>
-	<inherits name="com.github.gwtbootstrap.BootstrapNoResources" />
-	<inherits name="org.hibernate.validator.HibernateValidator" />
+    <inherits name="com.google.gwt.activity.Activity"/>
+    <inherits name="com.google.gwt.place.Place"/>
+    <inherits name="com.google.gwt.user.User"/>
+    <inherits name="com.google.web.bindery.requestfactory.RequestFactory"/>
+    <inherits name="com.google.gwt.user.cellview.CellView"/>
+    <inherits name="com.google.gwt.logging.Logging"/>
+    <inherits name="com.google.gwt.inject.Inject"/>
+    <inherits name="com.google.gwt.text.Text"/>
+    <inherits name="com.github.gwtbootstrap.BootstrapNoResources"/>
+    <inherits name="org.hibernate.validator.HibernateValidator"/>
 
 
-	<!--UiBinder Configuration -->
-	<set-configuration-property name="UiBinder.useSafeHtmlTemplates" value="true"/>
-	
-	<!-- gwt-bootstrap set responsive design -->
-	<set-property name="bootstrap.responsiveDesign" value="true"/>
+    <!--UiBinder Configuration -->
+    <set-configuration-property name="UiBinder.useSafeHtmlTemplates" value="true"/>
 
-	<define-property name="mobile.user.agent" values="mobilesafari, none"/>
+    <!-- gwt-bootstrap set responsive design -->
+    <set-property name="bootstrap.responsiveDesign" value="true"/>
 
-	<property-provider name="mobile.user.agent">
+    <define-property name="mobile.user.agent" values="mobilesafari, none"/>
 
-		<![CDATA[
+    <property-provider name="mobile.user.agent">
+
+        <![CDATA[
   		var ua = navigator.userAgent.toLowerCase();
 
         if (ua.indexOf("webkit") != -1 && ua.indexOf("mobile") != -1) {
@@ -53,31 +53,30 @@
         return "none";
   ]]>
 
-	</property-provider>
-	
-	
-	
-	<!-- Application (deferred binding)-->
-	<replace-with class="uz.javlon.webapp.client.application.MobileApplication">
-		<when-type-is class="uz.javlon.webapp.client.application.DesktopApplication"/>
-		<when-property-is name="mobile.user.agent" value="mobilesafari"/>
-	</replace-with>
+    </property-provider>
 
-	<!-- Client Side Validation Factory -->
-	<replace-with class="uz.javlon.webapp.client.application.ApplicationValidatorFactory">
-	  <when-type-is class="javax.validation.ValidatorFactory" />
-	</replace-with>	
 
-	<!-- Shell (deferred binding) -->
-	<replace-with class="uz.javlon.webapp.client.ui.DesktopShell">
-		<when-type-is class="uz.javlon.webapp.client.ui.Shell"/>
-	</replace-with>	
+    <!-- Application (deferred binding)-->
+    <replace-with class="uz.javlon.webapp.client.application.MobileApplication">
+        <when-type-is class="uz.javlon.webapp.client.application.DesktopApplication"/>
+        <when-property-is name="mobile.user.agent" value="mobilesafari"/>
+    </replace-with>
 
-	<replace-with class="uz.javlon.webapp.client.ui.MobileShell">
-		<when-type-is class="uz.javlon.webapp.client.ui.Shell"/>
-		<when-property-is name="mobile.user.agent" value="mobilesafari"/>
-	</replace-with>
+    <!-- Client Side Validation Factory -->
+    <replace-with class="uz.javlon.webapp.client.application.ApplicationValidatorFactory">
+        <when-type-is class="javax.validation.ValidatorFactory"/>
+    </replace-with>
 
-	<entry-point class="uz.javlon.webapp.client.MainEntryPoint"/>
+    <!-- Shell (deferred binding) -->
+    <replace-with class="uz.javlon.webapp.client.ui.DesktopShell">
+        <when-type-is class="uz.javlon.webapp.client.ui.Shell"/>
+    </replace-with>
+
+    <replace-with class="uz.javlon.webapp.client.ui.MobileShell">
+        <when-type-is class="uz.javlon.webapp.client.ui.Shell"/>
+        <when-property-is name="mobile.user.agent" value="mobilesafari"/>
+    </replace-with>
+
+    <entry-point class="uz.javlon.webapp.client.MainEntryPoint"/>
 
 </module>

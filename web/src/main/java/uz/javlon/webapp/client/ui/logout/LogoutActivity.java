@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package uz.javlon.webapp.client.ui.logout;
 
@@ -15,7 +15,6 @@ import uz.javlon.webapp.client.application.base.security.LogoutEvent;
 
 /**
  * @author ivangsa
- *
  */
 public class LogoutActivity extends AbstractBaseActivity {
 

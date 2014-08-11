@@ -10,6 +10,7 @@ import uz.javlon.model.Role;
 public interface RoleDao extends GenericDao<Role, Long> {
     /**
      * Gets role information based on rolename
+     *
      * @param rolename the rolename
      * @return populated role object
      */
@@ -17,6 +18,7 @@ public interface RoleDao extends GenericDao<Role, Long> {
 
     /**
      * Removes a role from the database by name
+     *
      * @param rolename the role's rolename
      */
     void removeRole(String rolename);

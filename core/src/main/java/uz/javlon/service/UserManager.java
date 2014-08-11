@@ -13,17 +13,19 @@ import java.util.List;
  * persistence layer.
  *
  * @author <a href="mailto:matt@raibledesigns.com">Matt Raible</a>
- *  Modified by <a href="mailto:dan@getrolling.com">Dan Kibler </a>
+ *         Modified by <a href="mailto:dan@getrolling.com">Dan Kibler </a>
  */
 public interface UserManager extends GenericManager<User, Long> {
     /**
      * Convenience method for testing - allows you to mock the DAO and set it on an interface.
+     *
      * @param userDao the UserDao implementation to use
      */
     void setUserDao(UserDao userDao);
 
     /**
      * Convenience method for testing - allows you to mock the PasswordEncoder and set it on an interface.
+     *
      * @param passwordEncoder the PasswordEncoder implementation to use
      */
     void setPasswordEncoder(PasswordEncoder passwordEncoder);
@@ -39,15 +41,16 @@ public interface UserManager extends GenericManager<User, Long> {
 
     /**
      * Finds a user by their username.
+     *
      * @param username the user's username used to login
      * @return User a populated user object
-     * @throws org.springframework.security.core.userdetails.UsernameNotFoundException
-     *         exception thrown when user not found
+     * @throws org.springframework.security.core.userdetails.UsernameNotFoundException exception thrown when user not found
      */
     User getUserByUsername(String username) throws UsernameNotFoundException;
 
     /**
      * Retrieves a list of all users.
+     *
      * @return List
      */
     List<User> getUsers();
@@ -56,8 +59,8 @@ public interface UserManager extends GenericManager<User, Long> {
      * Saves a user's information.
      *
      * @param user the user's information
-     * @throws UserExistsException thrown when user already exists
      * @return user the updated user object
+     * @throws UserExistsException thrown when user already exists
      */
     User saveUser(User user) throws UserExistsException;
 
@@ -77,6 +80,7 @@ public interface UserManager extends GenericManager<User, Long> {
 
     /**
      * Search a user for search terms.
+     *
      * @param searchTerm the search terms.
      * @return a list of matches, or all if no searchTerm.
      */
@@ -84,25 +88,22 @@ public interface UserManager extends GenericManager<User, Long> {
 
     /**
      * Builds a recovery password url by replacing placeholders with username and generated recovery token.
-     * 
+     * <p/>
      * UrlTemplate should include two placeholders '{username}' for username and '{token}' for the recovery token.
-     * 
+     *
      * @param user
-     * @param urlTemplate
-     *            template including two placeholders '{username}' and '{token}'
+     * @param urlTemplate template including two placeholders '{username}' and '{token}'
      * @return
      */
     String buildRecoveryPasswordUrl(User user, String urlTemplate);
 
     /**
-     *
      * @param user
      * @return
      */
     String generateRecoveryToken(User user);
 
     /**
-     *
      * @param username
      * @param token
      * @return
@@ -110,7 +111,6 @@ public interface UserManager extends GenericManager<User, Long> {
     boolean isRecoveryTokenValid(String username, String token);
 
     /**
-     * 
      * @param user
      * @param token
      * @return
@@ -121,13 +121,11 @@ public interface UserManager extends GenericManager<User, Long> {
      * Sends a password recovery email to username.
      *
      * @param username
-     * @param urlTemplate
-     *            url template including two placeholders '{username}' and '{token}'
+     * @param urlTemplate url template including two placeholders '{username}' and '{token}'
      */
     void sendPasswordRecoveryEmail(String username, String urlTemplate);
 
     /**
-     * 
      * @param username
      * @param currentPassword
      * @param recoveryToken

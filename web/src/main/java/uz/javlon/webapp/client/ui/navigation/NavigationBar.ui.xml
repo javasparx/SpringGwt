@@ -3,19 +3,21 @@
              xmlns:g="urn:import:com.google.gwt.user.client.ui"
         >
 
-	<g:HTMLPanel>
-		<div role="navigation" class="navbar navbar-default navbar-fixed-top">
-			<div class="navbar-header">
-				<button data-target="#navbar" data-toggle="collapse" class="navbar-toggle" type="button">
-					<span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
-				</button>
-				<a ui:field="brand" href="" class="navbar-brand">AppFuse</a>
-			</div>
-		
-			<div id="navbar" class="collapse navbar-collapse">
-				<ul ui:field="navBar" class="nav navbar-nav">
-				</ul>
-			</div>
-		</div>
-	</g:HTMLPanel>
+    <g:HTMLPanel>
+        <div role="navigation" class="navbar navbar-default navbar-fixed-top">
+            <div class="navbar-header">
+                <button data-target="#navbar" data-toggle="collapse" class="navbar-toggle" type="button">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a ui:field="brand" href="" class="navbar-brand">AppFuse</a>
+            </div>
+
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul ui:field="navBar" class="nav navbar-nav">
+                </ul>
+            </div>
+        </div>
+    </g:HTMLPanel>
 </ui:UiBinder>

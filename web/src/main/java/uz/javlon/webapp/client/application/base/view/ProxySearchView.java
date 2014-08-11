@@ -19,45 +19,51 @@ import javax.validation.ConstraintViolation;
  * @param <P> the type of the records to display
  */
 public interface ProxySearchView<P extends EntityProxy, S> extends IsWidget {
-	
-	/**
-	 * Implemented by the owner of a RecordTableView.
-	 *
-	 * @param <P> the type of the records to display
-	 */
-	interface Delegate<P> {
 
-		void addClicked();
-		void searchClicked();		
-		void cancelClicked();
+    /**
+     * Implemented by the owner of a RecordTableView.
+     *
+     * @param <P> the type of the records to display
+     */
+    interface Delegate<P> {
 
-		void showDetails(Class<? extends EntityProxy> proxyClass, String entityId);
-		void deleteClicked(Class<? extends EntityProxy> proxyClass, String entityId);
-	}
+        void addClicked();
 
-	/**
-	 * Sets the delegate.
-	 */
-	void setDelegate(Delegate<P> delegate);
-	void setSearchCriteria(S searchCriteria);
-	S getSearchCriteria();
-	
-	boolean setConstraintViolations(Iterable<ConstraintViolation<S>> violations);
-	
-	
-	HasData<P> asHasData();
-	ColumnSortList getColumnSortList();
-	void addColumnSortHandler(Handler clientSideSortHandler);
+        void searchClicked();
 
-	/**
-	 * @return the set of properties this view displays
-	 */
-	String[] getPaths();
+        void cancelClicked();
+
+        void showDetails(Class<? extends EntityProxy> proxyClass, String entityId);
+
+        void deleteClicked(Class<? extends EntityProxy> proxyClass, String entityId);
+    }
+
+    /**
+     * Sets the delegate.
+     */
+    void setDelegate(Delegate<P> delegate);
+
+    void setSearchCriteria(S searchCriteria);
+
+    S getSearchCriteria();
+
+    boolean setConstraintViolations(Iterable<ConstraintViolation<S>> violations);
 
 
-	/**
-	 * 
-	 * @param pageSize
-	 */
-	void setPageSize(Integer pageSize);
+    HasData<P> asHasData();
+
+    ColumnSortList getColumnSortList();
+
+    void addColumnSortHandler(Handler clientSideSortHandler);
+
+    /**
+     * @return the set of properties this view displays
+     */
+    String[] getPaths();
+
+
+    /**
+     * @param pageSize
+     */
+    void setPageSize(Integer pageSize);
 }

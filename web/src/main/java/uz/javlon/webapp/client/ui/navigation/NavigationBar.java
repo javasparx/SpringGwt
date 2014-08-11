@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package uz.javlon.webapp.client.ui.navigation;
 
@@ -15,7 +15,6 @@ import uz.javlon.webapp.client.application.utils.menu.MenuItem;
 
 /**
  * @author ivangsa
- *
  */
 public class NavigationBar extends BaseNavigationBar implements PlaceChangeEvent.Handler {
     private static NavigationBarUiBinder uiBinder = GWT.create(NavigationBarUiBinder.class);
@@ -95,7 +94,7 @@ public class NavigationBar extends BaseNavigationBar implements PlaceChangeEvent
 
     /**
      * Marks as 'active' menu item for current place and its parent menu places.
-     * 
+     *
      * @param menuItem
      * @return
      */

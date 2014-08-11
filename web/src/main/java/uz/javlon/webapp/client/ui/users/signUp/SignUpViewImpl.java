@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package uz.javlon.webapp.client.ui.users.signUp;
 
@@ -7,12 +7,11 @@ import uz.javlon.webapp.client.ui.users.editUser.EditUserViewImpl;
 
 /**
  * @author ivangsa
- *
  */
 public class SignUpViewImpl extends EditUserViewImpl implements SignUpView {
 
     /**
-     * 
+     *
      */
     public SignUpViewImpl() {
         super();

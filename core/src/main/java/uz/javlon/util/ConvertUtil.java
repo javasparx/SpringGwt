@@ -65,7 +65,7 @@ public final class ConvertUtil {
     public static Properties convertBundleToProperties(ResourceBundle rb) {
         Properties props = new Properties();
 
-        for (Enumeration<String> keys = rb.getKeys(); keys.hasMoreElements();) {
+        for (Enumeration<String> keys = rb.getKeys(); keys.hasMoreElements(); ) {
             String key = keys.nextElement();
             props.put(key, rb.getString(key));
         }
@@ -78,7 +78,7 @@ public final class ConvertUtil {
      * ResourceBundle
      *
      * @param obj an initialized object
-     * @param rb a resource bundle
+     * @param rb  a resource bundle
      * @return a populated object
      */
     public static Object populateObject(Object obj, ResourceBundle rb) {

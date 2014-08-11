@@ -13,14 +13,15 @@ import uz.javlon.webapp.client.ui.users.signUp.SignUpPlace;
 import uz.javlon.webapp.client.ui.users.updatePassword.UpdatePasswordPlace;
 
 @WithTokenizers({
-	HomePlace.Tokenizer.class,
-	LoginPlace.Tokenizer.class,
-	UpdatePasswordPlace.Tokenizer.class,
-	LogoutPlace.Tokenizer.class,
-	EditProfilePlace.Tokenizer.class,
-	SignUpPlace.Tokenizer.class,
-	ActiveUsersPlace.Tokenizer.class,
-	FileUploadPlace.Tokenizer.class,
-	ReloadOptionsPlace.Tokenizer.class	
-	})
-public interface ApplicationPlaceHistoryMapper extends PlaceHistoryMapperWithFactory<ApplicationPlaceHistoryFactory> {}
+        HomePlace.Tokenizer.class,
+        LoginPlace.Tokenizer.class,
+        UpdatePasswordPlace.Tokenizer.class,
+        LogoutPlace.Tokenizer.class,
+        EditProfilePlace.Tokenizer.class,
+        SignUpPlace.Tokenizer.class,
+        ActiveUsersPlace.Tokenizer.class,
+        FileUploadPlace.Tokenizer.class,
+        ReloadOptionsPlace.Tokenizer.class
+})
+public interface ApplicationPlaceHistoryMapper extends PlaceHistoryMapperWithFactory<ApplicationPlaceHistoryFactory> {
+}

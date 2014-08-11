@@ -71,7 +71,7 @@ public final class DateUtil {
      * This method generates a string representation of a date/time
      * in the format you specify on input
      *
-     * @param aMask the date pattern the string is in
+     * @param aMask   the date pattern the string is in
      * @param strDate a string representation of a date
      * @return a converted Date object
      * @throws ParseException when String doesn't match the expected format

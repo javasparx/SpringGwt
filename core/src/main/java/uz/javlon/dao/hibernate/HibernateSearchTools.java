@@ -29,9 +29,9 @@ class HibernateSearchTools {
     /**
      * Generates a lucene query to search for a given term in all the indexed fields of a class
      *
-     * @param searchTerm the term to search for
-     * @param searchedEntity the class searched
-     * @param sess the hibernate session
+     * @param searchTerm      the term to search for
+     * @param searchedEntity  the class searched
+     * @param sess            the hibernate session
      * @param defaultAnalyzer the default analyzer for parsing the search terms
      * @return
      * @throws ParseException
@@ -87,7 +87,7 @@ class HibernateSearchTools {
      * Regenerates the index for a given class
      *
      * @param clazz the class
-     * @param sess the hibernate session
+     * @param sess  the hibernate session
      */
     public static void reindex(Class clazz, Session sess) {
         FullTextSession txtSession = Search.getFullTextSession(sess);
@@ -105,7 +105,7 @@ class HibernateSearchTools {
      * Regenerates all the indexed class indexes
      *
      * @param async true if the reindexing will be done as a background thread
-     * @param sess the hibernate session
+     * @param sess  the hibernate session
      */
     public static void reindexAll(boolean async, Session sess) {
         FullTextSession txtSession = Search.getFullTextSession(sess);

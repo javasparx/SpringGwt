@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package uz.javlon.webapp.client.proxies;
 
@@ -9,12 +9,11 @@ import uz.javlon.webapp.server.services.UsersSearchCriteria;
 
 /**
  * @author ivangsa
- *
  */
 @ProxyFor(UsersSearchCriteria.class)
 public interface UsersSearchCriteriaProxy extends ValueProxy {
 
-	String getSearchTerm();
+    String getSearchTerm();
 
-	void setSearchTerm(String searchTerm);
+    void setSearchTerm(String searchTerm);
 }

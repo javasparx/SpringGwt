@@ -10,7 +10,7 @@ import uz.javlon.webapp.server.services.UserRequestService;
 
 import java.util.List;
 
-@Service(value = UserRequestService.class, locator=GwtServiceLocator.class)
+@Service(value = UserRequestService.class, locator = GwtServiceLocator.class)
 public interface UserRequest extends RequestContext {
 
     abstract Request<UserProxy> getCurrentUser();

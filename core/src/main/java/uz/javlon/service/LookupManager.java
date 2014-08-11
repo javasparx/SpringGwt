@@ -13,6 +13,7 @@ import java.util.List;
 public interface LookupManager {
     /**
      * Retrieves all possible roles from persistence layer
+     *
      * @return List of LabelValue objects
      */
     List<LabelValue> getAllRoles();

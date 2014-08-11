@@ -66,7 +66,7 @@ public abstract class BaseDaoTestCase extends AbstractTransactionalJUnit4SpringC
         // loop through all the beans methods and set its properties from its .properties file
         Map<String, String> map = new HashMap<String, String>();
 
-        for (Enumeration<String> keys = rb.getKeys(); keys.hasMoreElements();) {
+        for (Enumeration<String> keys = rb.getKeys(); keys.hasMoreElements(); ) {
             String key = keys.nextElement();
             map.put(key, rb.getString(key));
         }
@@ -80,8 +80,7 @@ public abstract class BaseDaoTestCase extends AbstractTransactionalJUnit4SpringC
      * Create a HibernateTemplate from the SessionFactory and call flush() and clear() on it.
      * Designed to be used after "save" methods in tests: http://issues.appfuse.org/browse/APF-178.
      *
-     * @throws org.springframework.beans.BeansException
-     *          when can't find 'sessionFactory' bean
+     * @throws org.springframework.beans.BeansException when can't find 'sessionFactory' bean
      */
     protected void flush() throws BeansException {
         Session currentSession = sessionFactory.getCurrentSession();

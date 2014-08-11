@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package uz.javlon.webapp.server.services.impl;
 
@@ -16,38 +16,35 @@ import java.util.*;
 
 /**
  * @author ivangsa
- *
  */
 @Component
 public class LookupRequestServiceImpl extends AbstractBaseRequest implements LookupRequestService {
 
-	@Autowired
-	private RoleManager roleManager;
+    @Autowired
+    private RoleManager roleManager;
 
-	/**
-	 * 
-	 * @return
-	 */
-	public LookupConstants getApplicationConstants() {
-		final Locale locale = LocaleContextHolder.getLocale();
-		LookupConstants applicationConstants = new LookupConstants();
-		
-		applicationConstants.setAvailableRoles(roleManager.getAll());
-		applicationConstants.setCountries(buildCountryList(locale));
-		
-		return applicationConstants;
-	}
-	
-	/**
-	 * 
-	 * @return
-	 */
-	@Secured("ROLE_ADMIN")
-	public LookupConstants reloadOptions() {
-		StartupListener.setupContext(getServletContext());
-		return getApplicationConstants();
-	}
-	
+    /**
+     * @return
+     */
+    public LookupConstants getApplicationConstants() {
+        final Locale locale = LocaleContextHolder.getLocale();
+        LookupConstants applicationConstants = new LookupConstants();
+
+        applicationConstants.setAvailableRoles(roleManager.getAll());
+        applicationConstants.setCountries(buildCountryList(locale));
+
+        return applicationConstants;
+    }
+
+    /**
+     * @return
+     */
+    @Secured("ROLE_ADMIN")
+    public LookupConstants reloadOptions() {
+        StartupListener.setupContext(getServletContext());
+        return getApplicationConstants();
+    }
+
     protected List<LabelValue> buildCountryList(final Locale locale) {
         final String EMPTY = "";
         final Locale[] available = Locale.getAvailableLocales();
@@ -68,11 +65,11 @@ public class LookupRequestServiceImpl extends AbstractBaseRequest implements Loo
         }
 
         Collections.sort(countries, new Comparator<LabelValue>() {
-        	@Override
-        	public int compare(LabelValue arg0, LabelValue arg1) {
-        		return arg0.getLabel().compareTo(arg1.getLabel());			
-        	
-        	}
+            @Override
+            public int compare(LabelValue arg0, LabelValue arg1) {
+                return arg0.getLabel().compareTo(arg1.getLabel());
+
+            }
         });
 
         return countries;

@@ -36,7 +36,6 @@ import uz.javlon.webapp.client.ui.users.updatePassword.UpdatePasswordPlace;
 
 /**
  * @author ivangsa
- *
  */
 public class ApplicationActivityMapper implements ActivityMapper {
 
@@ -64,45 +63,34 @@ public class ApplicationActivityMapper implements ActivityMapper {
     private AsyncProvider<UsersSearchActivity> usersSearchActivityProvider;
 
 
-
     @Override
     public Activity getActivity(final Place place) {
         Activity activity = null;
 
-        if(place instanceof LoginPlace) {
+        if (place instanceof LoginPlace) {
             activity = this.loginActivityProvider.get();
-        }
-        else if (place instanceof HomePlace) {
+        } else if (place instanceof HomePlace) {
             activity = this.homeActivityProvider.get();
-        }
-        else if (place instanceof UpdatePasswordPlace) {
+        } else if (place instanceof UpdatePasswordPlace) {
             activity = this.updatePasswordActivityProvider.get();
-        }
-        else if (place instanceof LogoutPlace) {
+        } else if (place instanceof LogoutPlace) {
             activity = new AsyncActivityProxy<LogoutActivity>(this.logoutActivityProvider);
-        }
-        else if (place instanceof SignUpPlace) {
+        } else if (place instanceof SignUpPlace) {
             activity = new AsyncActivityProxy<SignUpActivity>(this.signUpActivityProvider);
-        }
-        else if (place instanceof EditProfilePlace) {
+        } else if (place instanceof EditProfilePlace) {
             activity = new AsyncActivityProxy<EditProfileActivity>(this.editProfileActivityProvider);
-        }
-        else if (place instanceof ActiveUsersPlace) {
+        } else if (place instanceof ActiveUsersPlace) {
             activity = new AsyncActivityProxy<ActiveUsersActivity>(this.activeUsersActivityProvider);
-        }
-        else if (place instanceof FileUploadPlace) {
+        } else if (place instanceof FileUploadPlace) {
             activity = new AsyncActivityProxy<FileUploadActivity>(this.fileUploadActivityProvider);
-        }
-        else if (place instanceof ReloadOptionsPlace) {
+        } else if (place instanceof ReloadOptionsPlace) {
             activity = new AsyncActivityProxy<ReloadOptionsActivity>(this.reloadOptionsActivityProvider);
-        }
-        else if (place instanceof EntityProxyPlace) {
+        } else if (place instanceof EntityProxyPlace) {
             final EntityProxyPlace proxyPlace = (EntityProxyPlace) place;
             if (UserProxy.class.equals(proxyPlace.getProxyClass())) {
                 activity = new AsyncActivityProxy<EditUserActivity>(this.editUserActivityProvider);
             }
-        }
-        else if (place instanceof EntitySearchPlace) {
+        } else if (place instanceof EntitySearchPlace) {
             final EntitySearchPlace listPlace = (EntitySearchPlace) place;
             if (UserProxy.class.equals(listPlace.getProxyClass())) {
                 activity = new AsyncActivityProxy<UsersSearchActivity>(this.usersSearchActivityProvider);

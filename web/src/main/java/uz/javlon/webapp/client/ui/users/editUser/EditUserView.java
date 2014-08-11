@@ -9,6 +9,7 @@ import java.util.List;
 
 public interface EditUserView extends ProxyEditView<UserProxy, EditUserView> {
 
-	void setCountries(List<LabelValueProxy> countries);
-	void setAvailableRoles(List<RoleProxy> roles);
+    void setCountries(List<LabelValueProxy> countries);
+
+    void setAvailableRoles(List<RoleProxy> roles);
 }

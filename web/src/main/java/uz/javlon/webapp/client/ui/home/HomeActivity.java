@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package uz.javlon.webapp.client.ui.home;
 
@@ -11,7 +11,6 @@ import uz.javlon.webapp.client.application.base.activity.AbstractBaseActivity;
 
 /**
  * @author ivangsa
- *
  */
 public class HomeActivity extends AbstractBaseActivity {
 

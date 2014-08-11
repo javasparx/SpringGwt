@@ -8,75 +8,75 @@ import uz.javlon.webapp.server.locators.UserLocator;
 import java.util.Set;
 
 
-@ProxyFor(value=User.class, locator=UserLocator.class)
+@ProxyFor(value = User.class, locator = UserLocator.class)
 public interface UserProxy extends EntityProxy {
 
-	Long getId();
+    Long getId();
 
-	String getUsername();
+    String getUsername();
 
-	String getPassword();
+    String getPassword();
 
-	String getConfirmPassword();
+    String getConfirmPassword();
 
-	String getPasswordHint();
+    String getPasswordHint();
 
-	String getFirstName();
+    String getFirstName();
 
-	String getLastName();
+    String getLastName();
 
-	String getEmail();
+    String getEmail();
 
-	String getPhoneNumber();
+    String getPhoneNumber();
 
-	String getWebsite();
+    String getWebsite();
 
-	AddressProxy getAddress();
+    AddressProxy getAddress();
 
-	Set<RoleProxy> getRoles();
+    Set<RoleProxy> getRoles();
 
-	Integer getVersion();
+    Integer getVersion();
 
-	boolean isEnabled();
+    boolean isEnabled();
 
-	boolean isAccountExpired();
+    boolean isAccountExpired();
 
-	boolean isAccountLocked();
+    boolean isAccountLocked();
 
-	boolean isCredentialsExpired();
+    boolean isCredentialsExpired();
 
-	void setId(Long id);
+    void setId(Long id);
 
-	void setUsername(String username);
+    void setUsername(String username);
 
-	void setPassword(String password);
+    void setPassword(String password);
 
-	void setConfirmPassword(String confirmPassword);
+    void setConfirmPassword(String confirmPassword);
 
-	void setPasswordHint(String passwordHint);
+    void setPasswordHint(String passwordHint);
 
-	void setFirstName(String firstName);
+    void setFirstName(String firstName);
 
-	void setLastName(String lastName);
+    void setLastName(String lastName);
 
-	void setEmail(String email);
+    void setEmail(String email);
 
-	void setPhoneNumber(String phoneNumber);
+    void setPhoneNumber(String phoneNumber);
 
-	void setWebsite(String website);
+    void setWebsite(String website);
 
-	void setAddress(AddressProxy address);
+    void setAddress(AddressProxy address);
 
-	void setRoles(Set<RoleProxy> roles);
+    void setRoles(Set<RoleProxy> roles);
 
-	void setVersion(Integer version);
+    void setVersion(Integer version);
 
-	void setEnabled(boolean enabled);
+    void setEnabled(boolean enabled);
 
-	void setAccountExpired(boolean accountExpired);
+    void setAccountExpired(boolean accountExpired);
 
-	void setAccountLocked(boolean accountLocked);
+    void setAccountLocked(boolean accountLocked);
 
-	void setCredentialsExpired(boolean credentialsExpired);
+    void setCredentialsExpired(boolean credentialsExpired);
 
 }

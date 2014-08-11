@@ -6,12 +6,12 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<!-- MessageSource for beans that are not controllers (e.g. GWT RequestFactory Services) -->
+    <!-- MessageSource for beans that are not controllers (e.g. GWT RequestFactory Services) -->
     <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
         <property name="basename" value="uz.javlon.webapp.client.application.ApplicationResources"/>
         <property name="useCodeAsDefaultMessage" value="true"/>
-    </bean> 
-    
+    </bean>
+
     <!-- Overriding mail sender to add smtp.port property -->
     <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
         <property name="host" value="${mail.host}"/>
@@ -25,18 +25,18 @@
                 mail.smtp.auth=true
             </value>
         </property-->
-    </bean>    
+    </bean>
 
     <!-- Activates scanning of @Autowired -->
     <context:annotation-config/>
 
     <!-- Activates scanning of @Repository and @Service -->
     <context:component-scan base-package="uz.javlon"/>
-	
+
     <!-- Add new DAOs here -->
 
     <!-- Add new Managers here -->
-    
+
     <!-- Configure and Alternative PasswordTokenManager -->
-	<!-- <bean id="passwordTokenManager" class="uz.javlon.service.impl.PersistentPasswordTokenManagerImpl" autowire="default" /> -->
+    <!-- <bean id="passwordTokenManager" class="uz.javlon.service.impl.PersistentPasswordTokenManagerImpl" autowire="default" /> -->
 </beans>

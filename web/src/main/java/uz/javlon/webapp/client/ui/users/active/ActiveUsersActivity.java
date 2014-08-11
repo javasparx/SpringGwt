@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package uz.javlon.webapp.client.ui.users.active;
 
@@ -19,7 +19,6 @@ import java.util.List;
 
 /**
  * @author ivangsa
- *
  */
 public class ActiveUsersActivity extends AbstractBaseActivity implements ActiveUsersView.Delegate {
 

@@ -21,14 +21,17 @@ import uz.javlon.webapp.client.application.ApplicationResources;
 
 /**
  * @author ivangsa
- *
  */
 public class UpdatePasswordViewImpl extends Composite implements UpdatePasswordView, Editor<UpdatePasswordView.UserCredentials> {
 
-    interface Binder extends UiBinder<Widget, UpdatePasswordViewImpl> {}
+    interface Binder extends UiBinder<Widget, UpdatePasswordViewImpl> {
+    }
+
     private static Binder uiBinder = GWT.create(Binder.class);
 
-    interface Driver extends SimpleBeanEditorDriver<UpdatePasswordView.UserCredentials, UpdatePasswordViewImpl> { }
+    interface Driver extends SimpleBeanEditorDriver<UpdatePasswordView.UserCredentials, UpdatePasswordViewImpl> {
+    }
+
     private final Driver driver = GWT.create(Driver.class);
 
     ApplicationResources i18n = GWT.create(ApplicationResources.class);
@@ -36,14 +39,20 @@ public class UpdatePasswordViewImpl extends Composite implements UpdatePasswordV
 
     private Delegate delegate;
 
-    @UiField Paragraph subheading;
+    @UiField
+    Paragraph subheading;
 
-    @UiField TextBox username;
-    @UiField TextBox token;
-    @UiField PasswordTextBox currentPassword;
-    @UiField PasswordTextBox password;
+    @UiField
+    TextBox username;
+    @UiField
+    TextBox token;
+    @UiField
+    PasswordTextBox currentPassword;
+    @UiField
+    PasswordTextBox password;
 
-    @UiField Widget currentPasswordControlGroup;
+    @UiField
+    Widget currentPasswordControlGroup;
 
 
     @UiField
@@ -75,7 +84,7 @@ public class UpdatePasswordViewImpl extends Composite implements UpdatePasswordV
     public void setUserCredentials(final UserCredentials userCredentials) {
         driver.edit(userCredentials);
         final String token = userCredentials.getToken();
-        if(token == null || "".equals(token.trim())){
+        if (token == null || "".equals(token.trim())) {
             currentPasswordControlGroup.setVisible(true);
             subheading.setText(i18n.updatePassword_changePassword_message());
         } else {

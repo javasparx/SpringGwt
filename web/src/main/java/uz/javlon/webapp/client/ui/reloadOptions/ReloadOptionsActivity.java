@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package uz.javlon.webapp.client.ui.reloadOptions;
 
@@ -16,7 +16,6 @@ import uz.javlon.webapp.client.ui.home.HomePlace;
 
 /**
  * @author ivangsa
- *
  */
 public class ReloadOptionsActivity extends AbstractBaseActivity {
 
@@ -38,6 +37,7 @@ public class ReloadOptionsActivity extends AbstractBaseActivity {
                 placeController.goTo(new HomePlace());
                 shell.addMessage(i18n.reload_succeeded(), AlertType.SUCCESS);
             }
+
             @Override
             public void onFailure(final ServerFailure error) {
                 super.onFailure(error);

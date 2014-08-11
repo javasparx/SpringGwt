@@ -24,16 +24,23 @@ import uz.javlon.webapp.client.ui.navigation.SideNavigationBar;
  */
 public class DesktopShell extends Shell implements LoginEvent.Handler, LogoutEvent.Handler, PlaceChangeEvent.Handler {
 
-    interface Binder extends UiBinder<Widget, DesktopShell> {	}
+    interface Binder extends UiBinder<Widget, DesktopShell> {
+    }
+
     private static final Binder uiBinder = GWT.create(Binder.class);
 
-    @UiField NavigationBar navigationBar;
-    @UiField SideNavigationBar sideNavigationBar;
+    @UiField
+    NavigationBar navigationBar;
+    @UiField
+    SideNavigationBar sideNavigationBar;
 
-    @UiField FlowPanel messages;
-    @UiField NotificationMole mole;
+    @UiField
+    FlowPanel messages;
+    @UiField
+    NotificationMole mole;
 
-    @UiField Element currentUserInfo;
+    @UiField
+    Element currentUserInfo;
 
     public DesktopShell() {
         initWidget(uiBinder.createAndBindUi(this));
@@ -61,19 +68,18 @@ public class DesktopShell extends Shell implements LoginEvent.Handler, LogoutEve
 
     /**
      * Add an user message to the shell.
-     * 
+     * <p/>
      * Messages live on screen until next {@link PlaceChangeEvent}.
-     * 
+     *
      * @param alert
      */
     @Override
     public void addMessage(final AlertBase alert) {
         messages.add(alert);
-        Window.scrollTo(0 ,0);
+        Window.scrollTo(0, 0);
     }
 
     /**
-     * 
      * @param html
      * @param alertType
      */
@@ -110,7 +116,7 @@ public class DesktopShell extends Shell implements LoginEvent.Handler, LogoutEve
 
     @Override
     public void onPlaceChange(final PlaceChangeEvent event) {
-        Window.scrollTo(0 ,0);
+        Window.scrollTo(0, 0);
         for (final Widget widget : messages) {
             try {
                 widget.removeFromParent();

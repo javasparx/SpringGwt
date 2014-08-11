@@ -14,6 +14,7 @@ public class DateConverterTest extends TestCase {
         final List<Locale> locales = new ArrayList<Locale>() {
 
             private static final long serialVersionUID = 1L;
+
             {
                 add(Locale.US);
                 add(Locale.GERMANY);

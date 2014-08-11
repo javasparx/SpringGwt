@@ -26,7 +26,7 @@ public class CurrencyConverter implements Converter {
     /**
      * Convert a String to a Double and a Double to a String
      *
-     * @param type the class type to output
+     * @param type  the class type to output
      * @param value the object to convert
      * @return object the converted object (Double or String)
      */

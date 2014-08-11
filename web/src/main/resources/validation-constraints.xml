@@ -8,32 +8,32 @@
             <constraint annotation="javax.validation.constraints.NotNull"/>
             <constraint annotation="javax.validation.constraints.Size">
                 <element name="max">150</element>
-            </constraint>           
+            </constraint>
         </field>
-<!--         <field name="password"> -->
-<!--             <constraint annotation="javax.validation.constraints.NotNull" /> -->
-<!--             <constraint annotation="javax.validation.constraints.Size"> -->
-<!--                 <element name="max">150</element> -->
-<!--             </constraint>            -->
-<!--         </field> -->
+        <!--         <field name="password"> -->
+        <!--             <constraint annotation="javax.validation.constraints.NotNull" /> -->
+        <!--             <constraint annotation="javax.validation.constraints.Size"> -->
+        <!--                 <element name="max">150</element> -->
+        <!--             </constraint>            -->
+        <!--         </field> -->
         <field name="firstName">
             <constraint annotation="javax.validation.constraints.NotNull"/>
             <constraint annotation="javax.validation.constraints.Size">
                 <element name="max">150</element>
-            </constraint>           
+            </constraint>
         </field>
         <field name="lastName">
             <constraint annotation="javax.validation.constraints.NotNull"/>
             <constraint annotation="javax.validation.constraints.Size">
                 <element name="max">150</element>
-            </constraint>           
+            </constraint>
         </field>
         <field name="email">
             <constraint annotation="javax.validation.constraints.NotNull"/>
-            <constraint annotation="org.hibernate.validator.constraints.Email" />
+            <constraint annotation="org.hibernate.validator.constraints.Email"/>
             <constraint annotation="javax.validation.constraints.Size">
                 <element name="max">150</element>
-            </constraint>           
+            </constraint>
         </field>
         <field name="address">
             <valid/>

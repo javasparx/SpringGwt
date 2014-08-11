@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package uz.javlon.webapp.client.ui.upload;
 
@@ -9,11 +9,10 @@ import com.google.gwt.place.shared.Prefix;
 
 /**
  * @author ivangsa
- *
  */
 public class FileUploadPlace extends Place {
 
-	@Prefix("upload")
+    @Prefix("upload")
     public static class Tokenizer implements PlaceTokenizer<FileUploadPlace> {
         @Override
         public String getToken(FileUploadPlace place) {

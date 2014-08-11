@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package uz.javlon.webapp.client.ui.upload;
 
@@ -21,9 +21,8 @@ import java.util.Set;
 
 /**
  * @author ivangsa
- *
  */
-public class FileUploadActivity extends AbstractBaseActivity implements FileUploadView.Delegate, UploadedFileView.Delegate{
+public class FileUploadActivity extends AbstractBaseActivity implements FileUploadView.Delegate, UploadedFileView.Delegate {
 
     private final FileUploadView formView;
     private final UploadedFileView resultsView;
@@ -54,14 +53,13 @@ public class FileUploadActivity extends AbstractBaseActivity implements FileUplo
     }
 
 
-
     @Override
     public void onSubmit(final SubmitEvent event) {
-        if(formView != null) {
+        if (formView != null) {
             final FileUploadBean fileUpload = formView.getEditorDriver().flush();
             final Set violations = getValidator().validate(fileUpload);
             formView.getEditorDriver().setConstraintViolations(violations);
-            if(!violations.isEmpty()) {
+            if (!violations.isEmpty()) {
                 event.cancel();
             }
         }
@@ -70,7 +68,7 @@ public class FileUploadActivity extends AbstractBaseActivity implements FileUplo
     @Override
     public void onSubmitComplete(final SubmitCompleteEvent event) {
         final UploadedFileBean uploadedFile = parseResponse(event.getResults());
-        if(uploadedFile.getErrorMessages() != null && uploadedFile.getErrorMessages().length() > 0) {
+        if (uploadedFile.getErrorMessages() != null && uploadedFile.getErrorMessages().length() > 0) {
             final List<String> errorMessages = new ArrayList<String>();
             for (int i = 0; i < uploadedFile.getErrorMessages().length(); i++) {
                 errorMessages.add(uploadedFile.getErrorMessages().get(i));
@@ -104,6 +102,6 @@ public class FileUploadActivity extends AbstractBaseActivity implements FileUplo
     }
 
     private final native UploadedFileBean parseResponse(String json) /*-{
-		return eval('(' + json + ')');
+        return eval('(' + json + ')');
     }-*/;
 }

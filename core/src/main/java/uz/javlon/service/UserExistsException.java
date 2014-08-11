@@ -2,8 +2,8 @@ package uz.javlon.service;
 
 
 /**
- * An exception that is thrown by classes wanting to trap unique 
- * constraint violations.  This is used to wrap Spring's 
+ * An exception that is thrown by classes wanting to trap unique
+ * constraint violations.  This is used to wrap Spring's
  * DataIntegrityViolationException so it's checked in the web layer.
  *
  * @author <a href="mailto:matt@raibledesigns.com">Matt Raible</a>

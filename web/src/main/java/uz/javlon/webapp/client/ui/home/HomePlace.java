@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package uz.javlon.webapp.client.ui.home;
 
@@ -9,7 +9,6 @@ import com.google.gwt.place.shared.Prefix;
 
 /**
  * @author ivangsa
- *
  */
 public class HomePlace extends Place {
 

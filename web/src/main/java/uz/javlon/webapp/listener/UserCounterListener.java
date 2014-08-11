@@ -169,10 +169,10 @@ public class UserCounterListener implements ServletContextListener, HttpSessionA
             }
         }
     }
-    
-    public void sessionCreated(HttpSessionEvent se) { 
+
+    public void sessionCreated(HttpSessionEvent se) {
     }
-    
+
     public void sessionDestroyed(HttpSessionEvent se) {
         Object obj = se.getSession().getAttribute(EVENT_KEY);
         if (obj != null) {

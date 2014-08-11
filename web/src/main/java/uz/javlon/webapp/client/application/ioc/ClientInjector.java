@@ -7,5 +7,5 @@ import uz.javlon.webapp.client.application.Application;
 @GinModules(value = {ClientGinModule.class})
 public interface ClientInjector extends Ginjector {
 
-	Application getApplication();
+    Application getApplication();
 }

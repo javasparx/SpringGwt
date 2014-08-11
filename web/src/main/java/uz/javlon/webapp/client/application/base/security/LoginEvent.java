@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package uz.javlon.webapp.client.application.base.security;
 
@@ -10,48 +10,45 @@ import com.google.web.bindery.event.shared.HandlerRegistration;
 
 /**
  * @author ivangsa
- *
  */
 public class LoginEvent extends GwtEvent<LoginEvent.Handler> {
 
-	private static final Type<Handler> TYPE = new Type<Handler>();
+    private static final Type<Handler> TYPE = new Type<Handler>();
 
-	/**
-	 * Implemented by handlers of this type of event.
-	 */
-	public interface Handler extends EventHandler {
-		
-		/**
-		 * Called when a {@link LoginEvent} is fired.
-		 *
-		 * @param authRequiredEvent a {@link LoginEvent} instance
-		 */
-		void onLoginEvent(LoginEvent loginEvent);
-	}
+    /**
+     * Implemented by handlers of this type of event.
+     */
+    public interface Handler extends EventHandler {
 
-
-	@Override
-	public GwtEvent.Type<Handler> getAssociatedType() {
-		return TYPE;
-	}
+        /**
+         * Called when a {@link LoginEvent} is fired.
+         *
+         * @param authRequiredEvent a {@link LoginEvent} instance
+         */
+        void onLoginEvent(LoginEvent loginEvent);
+    }
 
 
-	/**
-	 * Register a {@link LoginEvent.Handler} on an {@link EventBus}.
-	 *
-	 * @param eventBus the {@link EventBus}
-	 * @param handler  a {@link LoginEvent.Handler}
-	 * @return a {@link HandlerRegistration} instance
-	 */
-	public static HandlerRegistration register(EventBus eventBus, LoginEvent.Handler handler) {
-		return eventBus.addHandler(TYPE, handler);
-	}
+    @Override
+    public GwtEvent.Type<Handler> getAssociatedType() {
+        return TYPE;
+    }
 
 
+    /**
+     * Register a {@link LoginEvent.Handler} on an {@link EventBus}.
+     *
+     * @param eventBus the {@link EventBus}
+     * @param handler  a {@link LoginEvent.Handler}
+     * @return a {@link HandlerRegistration} instance
+     */
+    public static HandlerRegistration register(EventBus eventBus, LoginEvent.Handler handler) {
+        return eventBus.addHandler(TYPE, handler);
+    }
 
 
-	@Override
-	protected void dispatch(Handler handler) {
-		handler.onLoginEvent(this);
-	}
+    @Override
+    protected void dispatch(Handler handler) {
+        handler.onLoginEvent(this);
+    }
 }

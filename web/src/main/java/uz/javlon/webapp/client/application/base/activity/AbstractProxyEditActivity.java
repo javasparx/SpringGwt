@@ -22,34 +22,34 @@ import java.util.logging.Logger;
 /**
  * Abstract activity for editing a record. Subclasses must provide access to the
  * request that will be fired when Save is clicked.
- * <p>
+ * <p/>
  * Instances are not reusable. Once an activity is stoped, it cannot be
  * restarted.
- * 
+ * <p/>
  * Required methods are:
  * <ol>
- * 	<li> {@link #createView(Place)}</li>
- * 	<li> {@link #createProxyRequest()}</li>
- *	<li> {@link #loadProxyRequest(RequestContext, EntityProxyId)}</li>
- * 	<li> {@link #saveOrUpdateRequest(RequestContext, EntityProxy)}</li>
- * 	<li> {@link #deleteRequest(RequestContext, EntityProxy)}</li>
+ * <li> {@link #createView(Place)}</li>
+ * <li> {@link #createProxyRequest()}</li>
+ * <li> {@link #loadProxyRequest(RequestContext, EntityProxyId)}</li>
+ * <li> {@link #saveOrUpdateRequest(RequestContext, EntityProxy)}</li>
+ * <li> {@link #deleteRequest(RequestContext, EntityProxy)}</li>
  * </ol>
- * 
+ * <p/>
  * Customization:
  * <ol>
- * 	<li> {@link #createProxy(RequestContext)}</li>
- * 	<li> {@link #getEntityId()}</li>
- * 	<li> {@link #getProxyClass()}</li>
- * 	<li> {@link #loadProxyRequest(RequestContext, EntityProxyId)}</li>
- * 	<li> {@link #getSavedMessage()}</li>
- * 	<li> {@link #getDeletedMessage()}</li>
- * 	<li> {@link #nextPlace(boolean)}</li>
- * 	<li> {@link #previousPlace()}</li>
+ * <li> {@link #createProxy(RequestContext)}</li>
+ * <li> {@link #getEntityId()}</li>
+ * <li> {@link #getProxyClass()}</li>
+ * <li> {@link #loadProxyRequest(RequestContext, EntityProxyId)}</li>
+ * <li> {@link #getSavedMessage()}</li>
+ * <li> {@link #getDeletedMessage()}</li>
+ * <li> {@link #nextPlace(boolean)}</li>
+ * <li> {@link #previousPlace()}</li>
  * </ol>
- * 
+ *
  * @param <P> the type of Proxy being edited
  */
-public abstract class AbstractProxyEditActivity<P extends EntityProxy> extends AbstractBaseActivity implements Activity,  ProxyEditView.Delegate {
+public abstract class AbstractProxyEditActivity<P extends EntityProxy> extends AbstractBaseActivity implements Activity, ProxyEditView.Delegate {
 
     protected ProxyEditView<P, ?> view;
     protected RequestFactoryEditorDriver<P, ?> editorDriver;
@@ -97,13 +97,12 @@ public abstract class AbstractProxyEditActivity<P extends EntityProxy> extends A
     /**
      * Called once to create the appropriate request to create/find and edit this entity and
      * that will be fired when the save button is clicked.
-     * 
+     *
      * @return the request context to edit this entity proxy.
      */
     protected abstract RequestContext createProxyRequest();
 
     /**
-     * 
      * @param requestContext
      * @return
      */
@@ -113,9 +112,9 @@ public abstract class AbstractProxyEditActivity<P extends EntityProxy> extends A
 
     /**
      * Create are Request to load this entity proxy.
-     * 
+     * <p/>
      * Note: Request.find() method is disabled in the server for security reasons.
-     * 
+     *
      * @param requestContext
      * @param proxyId
      * @return
@@ -123,7 +122,6 @@ public abstract class AbstractProxyEditActivity<P extends EntityProxy> extends A
     protected abstract Request<P> loadProxyRequest(RequestContext requestContext, String proxyId);
 
     /**
-     * 
      * @param requestContext
      * @param proxy
      * @return
@@ -132,7 +130,7 @@ public abstract class AbstractProxyEditActivity<P extends EntityProxy> extends A
 
     /**
      * Called on {@link #deleteClicked()} to create the appropriate request to delete entity.
-     * 
+     *
      * @return the request context to fire when the delete button is clicked
      */
     protected abstract RequestContext deleteRequest(RequestContext requestContext, P proxy);
@@ -149,7 +147,7 @@ public abstract class AbstractProxyEditActivity<P extends EntityProxy> extends A
 
 
     /**
-     * 
+     *
      */
     @Override
     public void start(final AcceptsOneWidget display, final EventBus eventBus) {
@@ -166,15 +164,15 @@ public abstract class AbstractProxyEditActivity<P extends EntityProxy> extends A
         });
     }
 
-    protected String getEntityId(){
-        if(currentPlace instanceof EntityProxyPlace) {
+    protected String getEntityId() {
+        if (currentPlace instanceof EntityProxyPlace) {
             return ((EntityProxyPlace) currentPlace).getEntityId();
         }
         return null;
     }
 
-    protected Class<? extends EntityProxy> getProxyClass(){
-        if(currentPlace instanceof EntityProxyPlace) {
+    protected Class<? extends EntityProxy> getProxyClass() {
+        if (currentPlace instanceof EntityProxyPlace) {
             return ((EntityProxyPlace) currentPlace).getProxyClass();
         }
         return null;
@@ -182,11 +180,11 @@ public abstract class AbstractProxyEditActivity<P extends EntityProxy> extends A
 
 
     /**
-     * 
+     *
      */
     protected void doLoadEntityProxy(final Receiver<P> onloadCallback) {
         final String proxyId = getEntityId();
-        if(proxyId == null) {
+        if (proxyId == null) {
             //create a brand new proxy entity
             final RequestContext requestContext = createProxyRequest();
             final P proxy = createProxy(requestContext);
@@ -197,24 +195,23 @@ public abstract class AbstractProxyEditActivity<P extends EntityProxy> extends A
         } else {
             //find this entity proxy on the server
             loadProxyRequest(createProxyRequest(), proxyId)
-            .with(editorDriver.getPaths())
-            .fire(new Receiver<P>() {
-                @Override
-                public void onSuccess(final P response) {
-                    if(editorDriver != null) {
-                        //edit this entity proxy on a new request
-                        editorDriver.edit(response, saveOrUpdateRequest(createProxyRequest(), response));
-                        //finish loading
-                        onloadCallback.onSuccess(response);
-                    }
-                }
-            });
+                    .with(editorDriver.getPaths())
+                    .fire(new Receiver<P>() {
+                        @Override
+                        public void onSuccess(final P response) {
+                            if (editorDriver != null) {
+                                //edit this entity proxy on a new request
+                                editorDriver.edit(response, saveOrUpdateRequest(createProxyRequest(), response));
+                                //finish loading
+                                onloadCallback.onSuccess(response);
+                            }
+                        }
+                    });
         }
     }
 
 
     /**
-     * 
      * @see uz.javlon.client.application.base.view.ProxyEditView.Delegate#saveClicked()
      */
     @Override
@@ -257,12 +254,11 @@ public abstract class AbstractProxyEditActivity<P extends EntityProxy> extends A
 
 
     /**
-     * 
      * @see uz.javlon.client.application.base.view.ProxyEditView.Delegate#deleteClicked()
      */
     @Override
     public void deleteClicked() {
-        if(!Window.confirm(getDeleteConfirmation())) {
+        if (!Window.confirm(getDeleteConfirmation())) {
             return;
         }
         deleteRequest(createProxyRequest(), entityProxy).fire(new Receiver<Void>() {
@@ -275,7 +271,6 @@ public abstract class AbstractProxyEditActivity<P extends EntityProxy> extends A
     }
 
     /**
-     * 
      * @see uz.javlon.client.application.base.view.ProxyEditView.Delegate#cancelClicked()
      */
     @Override
@@ -291,6 +286,7 @@ public abstract class AbstractProxyEditActivity<P extends EntityProxy> extends A
 
     /**
      * Creates the {@link Place} to go when this activity is canceled.
+     *
      * @param saved
      * @return
      */
@@ -300,11 +296,12 @@ public abstract class AbstractProxyEditActivity<P extends EntityProxy> extends A
 
     /**
      * Creates the {@link Place} to go after successfully saved or deleted this entity.
+     *
      * @param saved
      * @return
      */
     protected Place nextPlace(final boolean saved) {
-        if(saved) {
+        if (saved) {
             return new EntitySearchPlace(getProxyClass());
         } else { // deleted
             return new HomePlace();
@@ -320,7 +317,6 @@ public abstract class AbstractProxyEditActivity<P extends EntityProxy> extends A
     }
 
     /**
-     * 
      * @see com.google.gwt.activity.shared.AbstractActivity#mayStop()
      */
     @Override
@@ -333,7 +329,6 @@ public abstract class AbstractProxyEditActivity<P extends EntityProxy> extends A
     }
 
     /**
-     * 
      * @see com.google.gwt.activity.shared.AbstractActivity#onCancel()
      */
     @Override
@@ -342,7 +337,6 @@ public abstract class AbstractProxyEditActivity<P extends EntityProxy> extends A
     }
 
     /**
-     * 
      * @see com.google.gwt.activity.shared.AbstractActivity#onStop()
      */
     @Override
@@ -352,7 +346,6 @@ public abstract class AbstractProxyEditActivity<P extends EntityProxy> extends A
     }
 
     /**
-     * 
      * @return
      */
     private boolean changed() {

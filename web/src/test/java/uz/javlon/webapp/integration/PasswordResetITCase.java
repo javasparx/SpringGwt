@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package uz.javlon.webapp.integration;
 
@@ -14,7 +14,6 @@ import static org.junit.Assert.assertTrue;
 
 /**
  * @author ivangsa
- *
  */
 public class PasswordResetITCase extends SeleniumBaseTestCase {
 

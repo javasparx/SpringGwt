@@ -19,7 +19,7 @@ public class UserDaoTest extends BaseDaoTestCase {
     @Autowired
     private RoleDao rdao;
 
-    @Test(expected=DataAccessException.class)
+    @Test(expected = DataAccessException.class)
     public void testGetUserInvalid() throws Exception {
         // should throw DataAccessException
         dao.get(1000L);
@@ -42,7 +42,7 @@ public class UserDaoTest extends BaseDaoTestCase {
         log.debug("password: " + password);
     }
 
-    @Test(expected=DataIntegrityViolationException.class)
+    @Test(expected = DataIntegrityViolationException.class)
     public void testUpdateUser() throws Exception {
         User user = dao.get(-1L);
 
@@ -102,7 +102,7 @@ public class UserDaoTest extends BaseDaoTestCase {
         assertEquals(1, user.getRoles().size());
     }
 
-    @Test(expected=DataAccessException.class)
+    @Test(expected = DataAccessException.class)
     public void testAddAndRemoveUser() throws Exception {
         User user = new User("testuser");
         user.setPassword("testpass");

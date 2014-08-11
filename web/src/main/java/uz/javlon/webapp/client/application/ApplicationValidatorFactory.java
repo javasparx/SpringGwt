@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package uz.javlon.webapp.client.application;
 
@@ -16,17 +16,17 @@ import javax.validation.Validator;
 
 /**
  * @author ivangsa
- *
  */
 public class ApplicationValidatorFactory extends AbstractGwtValidatorFactory {
 
     @GwtValidation({
-        LoginView.LoginDetails.class,
-        UpdatePasswordView.UserCredentials.class,
-        UserProxy.class,
-        FileUploadBean.class
+            LoginView.LoginDetails.class,
+            UpdatePasswordView.UserCredentials.class,
+            UserProxy.class,
+            FileUploadBean.class
     })
-    public interface GwtValidator extends Validator {}
+    public interface GwtValidator extends Validator {
+    }
 
     @Override
     public AbstractGwtValidator createValidator() {

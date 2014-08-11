@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package uz.javlon.webapp.client.requests;
 
@@ -12,12 +12,11 @@ import uz.javlon.webapp.server.services.LookupRequestService;
 
 /**
  * @author ivangsa
- *
  */
 @Service(value = LookupRequestService.class, locator = GwtServiceLocator.class)
 public interface LookupRequest extends RequestContext {
 
-	public Request<LookupConstantsProxy> getApplicationConstants();
+    public Request<LookupConstantsProxy> getApplicationConstants();
 
-	public Request<LookupConstantsProxy> reloadOptions();
+    public Request<LookupConstantsProxy> reloadOptions();
 }

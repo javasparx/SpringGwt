@@ -35,7 +35,6 @@ public abstract class SeleniumBaseTestCase {
 
     /**
      * WaitFor callback interface.
-     * 
      */
     protected interface WaitFor {
         boolean isFinished();
@@ -123,7 +122,8 @@ public abstract class SeleniumBaseTestCase {
 
     protected boolean waitForTitle(final WebDriver driver, final String title) {
         return waitFor(new WaitFor() {
-            @Override public boolean isFinished() {
+            @Override
+            public boolean isFinished() {
                 return driver.getTitle().matches(title);
             }
         });
@@ -131,7 +131,8 @@ public abstract class SeleniumBaseTestCase {
 
     protected boolean waitForElement(final By selector) {
         return waitFor(new WaitFor() {
-            @Override public boolean isFinished() {
+            @Override
+            public boolean isFinished() {
                 return isElementPresent(selector);
             }
         });
@@ -139,7 +140,8 @@ public abstract class SeleniumBaseTestCase {
 
     protected boolean waitForElementNotPresent(final By selector) {
         return waitFor(new WaitFor() {
-            @Override public boolean isFinished() {
+            @Override
+            public boolean isFinished() {
                 return !isElementPresent(selector);
             }
         });
@@ -151,7 +153,8 @@ public abstract class SeleniumBaseTestCase {
 
     protected boolean waitForAlert(final String alertText) {
         return waitFor(new WaitFor() {
-            @Override public boolean isFinished() {
+            @Override
+            public boolean isFinished() {
                 String regex = alertText;
                 if (StringUtils.isBlank(regex) || "*".equals(regex)) {
                     regex = "^[\\s\\S]*$";
